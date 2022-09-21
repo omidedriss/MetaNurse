@@ -58,6 +58,7 @@ int codeMeli1,codePersonaly1,number1;
                     Intent i = new Intent(getApplicationContext(),getcode.class);
                     putExtra();
                     startActivity(i);
+
             }
 
                else {
