@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ TextView vorud,backLogin;
 Button btSingUp;
 EditText password,confirmPassword,name,family,codMeli,phoneNumber,codePersonally;
 RadioButton doctor,nurse,pationt;
+RadioGroup radioGroup;
 int codeMeli1,codePersonaly1,number1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,17 +43,27 @@ int codeMeli1,codePersonaly1,number1;
         phoneNumber = findViewById(R.id.phone);
         doctor = findViewById(R.id.doctor);
         nurse = findViewById(R.id.nurse);
+        radioGroup = findViewById(R.id.radioGroup);
         pationt = findViewById(R.id.patient);
         backLogin = findViewById(R.id.haveaccount);
         btSingUp = findViewById(R.id.signup_btn);
         pationt.setChecked(true);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(pationt.isChecked()){
+                    codePersonally.setEnabled(false);
+                    codePersonally.setHint("کد پرسنلی غیر فعال");
+                }else {
+                    codePersonally.setEnabled(true);
+                    codePersonally.setHint("کد پرسنلی فعال");}
+            }
+        });
         btSingUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
- /*           if(!pationt.isChecked()){
 
-            }*/
                 if(password.getText().toString().equalsIgnoreCase(confirmPassword.getText().toString())
                         &&phoneNumber.getText().toString().startsWith("09")&&phoneNumber.getText().toString().length()==11&&
                         codMeli.getText().toString().length()==10){

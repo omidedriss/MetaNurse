@@ -24,7 +24,7 @@ private String codmeli , codPersonally , number;
         setContentView(R.layout.activity_login);
         entry();
         inPut();
-        //checker();
+        checker();
     }
     //هنگام اجرا برنامه ادیت  تکس ها و ... مچ میشن
     public void entry (){
@@ -58,10 +58,10 @@ private String codmeli , codPersonally , number;
        // SharedPreferences shareNumber = getSharedPreferences("codepersonally", Context.MODE_PRIVATE);
         number = shareName .getString("number","0");
     }
-/*    public void checker (){
-        if(codmeli !=0 && codPersonally != 0){
+    public void checker (){
+        if(!codmeli .equalsIgnoreCase("0") && !codPersonally .equalsIgnoreCase("0") ){
             codePersonally.setText(codPersonally);
-        }else if(codPersonally == 0 && codmeli !=0 ){
+        }else if(codPersonally.equals("0")  && codmeli.equals("0") ){
             codePersonally.setText(codmeli);
         }
         if(password.startsWith("noPass")){
@@ -69,6 +69,6 @@ private String codmeli , codPersonally , number;
         }else {
             pass.setText(password);
         }
-    }*/
+    }
 
 }
