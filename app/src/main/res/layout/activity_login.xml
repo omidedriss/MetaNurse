@@ -57,7 +57,7 @@
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordlogin"
+
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
             android:layout_height="50dp"
 
             android:background="@drawable/sms_drawable"
-
+            android:id="@+id/passwordlogin"
             android:textSize="20dp"
             android:hint="پسورد"
             />

@@ -16,6 +16,10 @@
             android:exported="true">
 
         </activity>
+        <activity android:name=".signup"
+            android:exported="true">
+
+        </activity>
         <activity android:name=".login"
             android:exported="true">
 

@@ -184,7 +184,7 @@
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
+
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -200,6 +200,7 @@
         android:layout_marginTop="490dp"
         tools:ignore="MissingConstraints">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
             android:layout_width="350dp"
             android:layout_gravity="center"
             android:layout_height="50dp"
@@ -213,7 +214,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirmpassword"
+
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -228,6 +229,7 @@
         android:layout_marginTop="550dp"
         tools:ignore="MissingConstraints">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirmpassword"
             android:layout_width="350dp"
             android:layout_gravity="center"
             android:layout_height="50dp"

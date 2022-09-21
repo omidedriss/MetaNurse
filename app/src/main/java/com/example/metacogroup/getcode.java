@@ -12,8 +12,7 @@ public class getcode extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_getcode);
-        ConstraintLayout constraintLayout =findViewById(R.id.color_ss);
-
+        ConstraintLayout constraintLayout = findViewById(R.id.color_ss);
         AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
         animationDrawable.setEnterFadeDuration(2500);
         animationDrawable.setExitFadeDuration(4000);
