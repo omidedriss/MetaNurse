@@ -239,7 +239,6 @@
             android:background="@drawable/sms_drawable2"
             android:textSize="20dp"
             android:text="دکتر" />
-
         <RadioButton
             android:id="@+id/nurse"
             android:layout_width="match_parent"
