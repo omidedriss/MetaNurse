@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:layout_editor_absoluteX="0dp"
     android:layoutDirection="rtl"
-    tools:layout_editor_absoluteY="0dp">
+    android:layout_gravity="center"
+    tools:layout_editor_absoluteY="0dp"
+    android:background="#f1f261">
     <!--    <FrameLayout-->
     <!--        android:layout_width="match_parent"-->
     <!--        android:layout_height="match_parent">-->
@@ -26,11 +28,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="52dp"
-        android:text="ثبت نام"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="40dp"
 
-        android:textColor="#000"
+        android:text="ثبت نام"
+        android:textColor="@color/purple_700"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,41 +44,76 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginTop="310dp"
 
         android:background="@drawable/sms_drawable"
         android:ems="10"
         android:hint="اسم"
+
         android:inputType="text"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:textColorHint="#808080"
+        android:textColorHint="@color/purple_700"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/get_password"
-        android:layout_width="350dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="552dp"
-        android:background="@drawable/sms_drawable"
-        android:ems="10"
-        android:hint="پسورد 6 رقمی"
-        android:inputType="text"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textColorHint="#808080"
-        android:textSize="20dp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="0dp"
+        android:layout_gravity="center"
+        android:textColorHint="@color/purple_700"
+            app:boxCornerRadiusBottomEnd="55dp"
+        app:boxCornerRadiusBottomStart="55dp"
+        app:boxCornerRadiusTopEnd="55dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:hintAnimationEnabled="false"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="550dp"
+        tools:ignore="MissingConstraints">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="350dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:background="@drawable/sms_drawable"
+
+            android:textSize="20dp"
+            android:hint="پسورد"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="0dp"
+        android:layout_gravity="center"
+        android:textColorHint="@color/purple_700"
         app:layout_constraintTop_toTopOf="parent"
         app:passwordToggleEnabled="true"
-        tools:ignore="MissingConstraints" />
+        app:boxCornerRadiusBottomStart="55dp"
+        app:hintAnimationEnabled="false"
+        app:boxCornerRadiusTopEnd="55dp"
+        android:layout_marginTop="610dp"
+        tools:ignore="MissingConstraints">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="350dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:background="@drawable/sms_drawable"
+            android:hint="تایید پسورد"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <EditText
         android:id="@+id/get_username2"
@@ -91,7 +128,7 @@
         android:inputType="text"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:textColorHint="#808080"
+        android:textColorHint="@color/purple_700"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,26 +136,7 @@
         app:passwordToggleEnabled="true"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/get_confirmpassword"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="620dp"
-        android:background="@drawable/sms_drawable"
-        android:ems="10"
-        android:hint="تایید پسورد"
-        android:inputType="text"
-        android:paddingStart="20dp"
 
-        android:paddingEnd="20dp"
-        android:textColorHint="#808080"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/get_phonenumber"
@@ -133,7 +151,7 @@
         android:inputType="text"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:textColorHint="#808080"
+        android:textColorHint="@color/purple_700"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -147,7 +165,7 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="768dp"
         android:text="ایا اکانت دارید؟واردشوید"
-        android:textColor="#000"
+        android:textColor="@color/purple_700"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -156,8 +174,8 @@
         android:id="@+id/signup2"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="696dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="692dp"
         android:background="@drawable/sms_drawable2"
         android:text="ثبت نام"
         android:textColor="#000"
@@ -171,14 +189,15 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="370dp"
         android:background="@drawable/sms_drawable"
         android:ems="10"
-        android:hint="قامیل"
+        android:hint="فامیل"
         android:inputType="text"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:textColorHint="#808080"
+        android:textColorHint="@color/purple_700"
+
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -186,32 +205,37 @@
         tools:ignore="MissingConstraints" />
 
     <RadioGroup
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/doctor"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:layout_height="50dp"
+            android:background="@drawable/sms_drawable2"
+            android:textSize="20dp"
             android:text="دکتر" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/nurse"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/sms_drawable2"
+            android:textSize="20dp"
             android:text="پرستار" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/patient"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:background="@drawable/sms_drawable2"
             android:text="مریض" />
     </RadioGroup>
 
