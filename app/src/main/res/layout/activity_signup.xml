@@ -22,7 +22,6 @@
     <!--            android:background="@drawable/cc" />-->
 
     <!--    </FrameLayout>-->
-
     <TextView
         android:id="@+id/signup"
         android:layout_width="wrap_content"
