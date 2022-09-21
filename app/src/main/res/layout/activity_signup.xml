@@ -38,17 +38,100 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/family"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="332dp"
+        android:background="@drawable/sms_drawable"
+        android:ems="10"
+        android:hint="فامیل"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/purple_700"
+
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
         android:id="@+id/name"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="310dp"
+        android:layout_marginTop="272dp"
 
         android:background="@drawable/sms_drawable"
         android:ems="10"
         android:hint="اسم"
 
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/purple_700"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/codepersonally"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="452dp"
+        android:background="@drawable/sms_drawable"
+        android:ems="10"
+        android:hint="کد پرسنلی"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/purple_700"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:passwordToggleEnabled="true"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="510dp"
+        android:background="@drawable/sms_drawable"
+        android:ems="10"
+        android:hint="شماره موبایل"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="@color/purple_700"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:passwordToggleEnabled="true"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/codemeli"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="392dp"
+        android:background="@drawable/sms_drawable"
+        android:ems="10"
+        android:hint="کد ملی"
         android:inputType="text"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
@@ -73,7 +156,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:hintAnimationEnabled="false"
         app:passwordToggleEnabled="true"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="570dp"
         tools:ignore="MissingConstraints">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="350dp"
@@ -101,7 +184,7 @@
         app:boxCornerRadiusBottomStart="55dp"
         app:hintAnimationEnabled="false"
         app:boxCornerRadiusTopEnd="55dp"
-        android:layout_marginTop="610dp"
+        android:layout_marginTop="630dp"
         tools:ignore="MissingConstraints">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="350dp"
@@ -115,49 +198,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <EditText
-        android:id="@+id/codepersonally"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="488dp"
-        android:background="@drawable/sms_drawable"
-        android:ems="10"
-        android:hint="کد پرسنلی"
-        android:inputType="text"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textColorHint="@color/purple_700"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:passwordToggleEnabled="true"
-        tools:ignore="MissingConstraints" />
-
-
-
-    <EditText
-        android:id="@+id/codemeli"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="428dp"
-        android:background="@drawable/sms_drawable"
-        android:ems="10"
-        android:hint="کد ملی"
-        android:inputType="text"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textColorHint="@color/purple_700"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/haveaccount"
@@ -183,27 +223,6 @@
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/family"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="370dp"
-        android:background="@drawable/sms_drawable"
-        android:ems="10"
-        android:hint="فامیل"
-        android:inputType="text"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textColorHint="@color/purple_700"
-
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <RadioGroup
         android:layout_width="350dp"
