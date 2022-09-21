@@ -7,9 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="20dp"
-    android:background="#808080"
+    android:background="#f1f261"
     android:orientation="vertical"
-    tools:context=".Saeidian.saeidian_extend.saeidian_mashat"
     card_view:cardCornerRadius="4dp"
     tools:ignore="MissingDefaultResource"
     android:layout_margin="15dp"
@@ -19,10 +18,11 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:orientation="horizontal"
-        android:background="#808080">
+        android:background="#f1f261"
+        >
 
         <ImageView
-            android:id="@+id/list_call2"
+            android:id="@+id/danger"
             android:layout_width="81dp"
             android:layout_height="67dp"
 
@@ -33,9 +33,9 @@
             tools:srcCompat="@drawable/phone" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/name_setting"
+            android:layout_width="135dp"
+            android:layout_height="45dp"
             android:background="@drawable/sms_drawable2"
             android:padding="10dp"
             android:text="اسم:"
@@ -44,9 +44,9 @@
 
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="35dp"
-            android:layout_height="33dp"
+            android:id="@+id/family_setting"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
             android:layout_marginStart="144dp"
             android:layout_marginTop="4dp"
             android:background="@drawable/sms_drawable2"
@@ -57,7 +57,7 @@
 
 
         <ImageView
-            android:id="@+id/list_info"
+            android:id="@+id/prof_image"
             android:layout_width="84dp"
             android:layout_height="97dp"
             android:layout_marginStart="284dp"
@@ -68,22 +68,23 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/info" />
 
+
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:id="@+id/room_seting"
+            android:layout_width="130dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="64dp"
             android:background="@drawable/sms_drawable2"
             android:padding="10dp"
             android:text="اتاق:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/sit_setting"
+            android:layout_width="130dp"
+            android:layout_height="43dp"
             android:layout_marginStart="144dp"
             android:layout_marginTop="68dp"
             android:background="@drawable/sms_drawable2"
@@ -93,7 +94,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/signup2"
+            android:id="@+id/ar2"
             android:layout_width="248dp"
             android:layout_height="58dp"
             android:layout_marginStart="12dp"
@@ -106,7 +107,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/signup2"
+            android:id="@+id/ar1"
             android:layout_width="239dp"
             android:layout_height="52dp"
             android:layout_marginStart="12dp"

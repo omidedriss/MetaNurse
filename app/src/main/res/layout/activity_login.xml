@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="rtl">
+    android:layoutDirection="rtl"
+    android:background="#f1f261">
 
 <!--    <FrameLayout-->
 <!--        android:layout_width="match_parent"-->
@@ -19,27 +20,28 @@
 <!--            android:background="@drawable/cc" />-->
 
 <!--    </FrameLayout>-->
+
     <TextView
-        android:id="@+id/signin"
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="196dp"
 
         android:text="ورود"
-        android:textColor="#000"
-        android:textSize="30dp"
+        android:textColor="@color/purple_700"
+        android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/get_username"
+        android:id="@+id/codemelipersoneli"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="288dp"
         android:background="@drawable/sms_drawable"
         android:ems="10"
@@ -47,54 +49,64 @@
         android:inputType="text"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:textColorHint="#808080"
+        android:textColorHint="@color/purple_700"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/get_password"
-        android:layout_width="350dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordlogin"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="352dp"
-        android:background="@drawable/sms_drawable"
-        android:ems="10"
-        android:hint="پسورد"
-        android:inputType="text"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textColorHint="#808080"
-        android:textSize="20dp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="0dp"
+        android:layout_gravity="center"
+        android:textColorHint="@color/purple_700"
+        app:boxCornerRadiusBottomEnd="55dp"
+        app:boxCornerRadiusBottomStart="55dp"
+        app:boxCornerRadiusTopEnd="55dp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:hintAnimationEnabled="false"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="350dp"
+        tools:ignore="MissingConstraints">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="350dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+
+            android:background="@drawable/sms_drawable"
+
+            android:textSize="20dp"
+            android:hint="پسورد"
+            />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/reset"
+        android:id="@+id/forgetpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="424dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="408dp"
         android:ems="10"
         android:text="فراموشی رمز"
         android:textColor="#000"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/login2"
+        android:id="@+id/login_btn"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="448dp"
         android:background="@drawable/sms_drawable2"
         android:text="ورود"
         android:textColor="#000"
@@ -104,23 +116,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/no_acount"
+        android:id="@+id/donthaveacount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="564dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="524dp"
         android:text="اکانت ندارید؟ ثبت نام کنید"
-        android:textColor="#000"
+        android:textColorHint="@color/purple_700"
         android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/signin_icon"
+        android:id="@+id/loginicon"
         android:layout_width="200dp"
         android:layout_height="150dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/login" />

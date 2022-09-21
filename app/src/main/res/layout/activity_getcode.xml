@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f1f261"
     android:layoutDirection="rtl">
 
 <!--    <FrameLayout-->
@@ -27,7 +28,7 @@
         android:layout_marginStart="176dp"
         android:layout_marginTop="224dp"
         android:text="OTP"
-        android:textColor="#000"
+        android:textColor="@color/purple_700"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,35 +42,35 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="276dp"
         android:text="کد فرستاده شده توسط پیامک را وارد کنید"
-        android:textColor="#000"
+        android:textColor="@color/purple_700"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/phone1"
+        android:id="@+id/enteredphone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="24dp"
         android:layout_marginTop="336dp"
         android:text="شماره موبایل وارد شده : "
-        android:textColor="#000"
+        android:textColor="@color/purple_700"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/phone2"
+        android:id="@+id/phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="24dp"
         android:layout_marginTop="396dp"
         android:text="phone"
-        android:textColor="#000"
+        android:textColor="@color/purple_700"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +89,7 @@
         android:inputType="text"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:textColorHint="#808080"
+        android:textColorHint="@color/purple_700"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,10 +100,10 @@
         android:id="@+id/wrong_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="516dp"
-        android:text="شماره موبایل دارد شده غلط است ؟?"
-        android:textColor="#000"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="520dp"
+        android:text="شماره موبایل دارد شده غلط است ؟"
+        android:textColor="@color/purple_700"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -116,7 +117,7 @@
 
         android:background="@drawable/sms_drawable2"
         android:text="تایید"
-        android:textColor="#000"
+        android:textColor="@color/purple_700"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -128,7 +129,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="632dp"
         android:text="کد دریافت نشده است؟ارسال دوباره کد"
-        android:textColor="#000"
+        android:textColor="@color/purple_700"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
