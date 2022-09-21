@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +16,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Random;
 
 import javax.xml.validation.Validator;
 
@@ -23,6 +27,7 @@ Button btSingUp;
 EditText password,confirmPassword,name,family,codMeli,phoneNumber,codePersonally;
 RadioButton doctor,nurse,pationt;
 RadioGroup radioGroup;
+String message;
 int codeMeli1,codePersonaly1,number1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,13 @@ int codeMeli1,codePersonaly1,number1;
         entry();
         Typeface font = Typeface.createFromAsset(getAssets(), "saeidian_font/BNazanin.ttf");
         vorud.setTypeface(font);
+        password .setTextColor(Color.BLACK);
+                confirmPassword.setTextColor(Color.BLACK);
+        name.setTextColor(Color.BLACK);
+        family.setTextColor(Color.BLACK);
+        codMeli.setTextColor(Color.BLACK);
+        phoneNumber.setTextColor(Color.BLACK);
+        codePersonally.setTextColor(Color.BLACK);
     }
     public void entry (){
         vorud=findViewById(R.id.signup);
@@ -47,7 +59,7 @@ int codeMeli1,codePersonaly1,number1;
         pationt = findViewById(R.id.patient);
         backLogin = findViewById(R.id.haveaccount);
         btSingUp = findViewById(R.id.signup_btn);
-        pationt.setChecked(true);
+        nurse.setChecked(true);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -64,17 +76,31 @@ int codeMeli1,codePersonaly1,number1;
             public void onClick(View v) {
 
 
-                if(password.getText().toString().equalsIgnoreCase(confirmPassword.getText().toString())
-                        &&phoneNumber.getText().toString().startsWith("09")&&phoneNumber.getText().toString().length()==11&&
-                        codMeli.getText().toString().length()==10){
-                    Intent i = new Intent(getApplicationContext(),getcode.class);
+                if (password.getText().toString().equalsIgnoreCase(confirmPassword.getText().toString())
+                        && phoneNumber.getText().toString().startsWith("09") && phoneNumber.getText().toString().length() == 11 &&
+                        codMeli.getText().toString().length() == 10) {
                     putExtra();
+                    Random random = new Random();
+                    int val = random.nextInt(1000000);
+                    message = (Integer.toString(val));
+                    SmsManager mySmsManager = SmsManager.getDefault();
+                    mySmsManager.sendTextMessage(phoneNumber.getText().toString(), null, message, null, null);
+                    Intent i = new
+                            Intent(signup.this, getcode.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("code", message);
+                    i.putExtras(bundle);
+
                     startActivity(i);
+//            if (TextUtils.isEmpty(phone.getText().toString())) {
+//                Toast.makeText(saeidian_login2.this, "Enter a valid Number", Toast.LENGTH_SHORT).show();
+//            } else {
+//                String number = phone.getText().toString();
+//                sendverificationcode(number);
+//            }
 
-            }
-
-               else {
-                    Toast.makeText(getApplicationContext(),"اطالاعات وارد شده نادرست است",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "اطالاعات وارد شده نادرست است", Toast.LENGTH_LONG).show();
                 }
             }
         });

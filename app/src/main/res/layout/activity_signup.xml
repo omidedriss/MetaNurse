@@ -31,7 +31,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/radioGroup">
 
             <RadioButton
                 android:id="@+id/doctor"
@@ -80,10 +81,11 @@
 
     <EditText
         android:id="@+id/family"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginTop="250dp"
         android:background="@drawable/sms_drawable"
         android:ems="10"
@@ -101,10 +103,11 @@
 
     <EditText
         android:id="@+id/name"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginTop="192dp"
 
         android:background="@drawable/sms_drawable"
@@ -123,10 +126,11 @@
 
     <EditText
         android:id="@+id/codepersonally"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginTop="370dp"
         android:background="@drawable/sms_drawable"
         android:ems="10"
@@ -144,10 +148,11 @@
 
     <EditText
         android:id="@+id/phone"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginTop="430dp"
         android:background="@drawable/sms_drawable"
         android:ems="10"
@@ -165,10 +170,11 @@
 
     <EditText
         android:id="@+id/codemeli"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginTop="310dp"
         android:background="@drawable/sms_drawable"
         android:ems="10"
@@ -186,7 +192,7 @@
     <com.google.android.material.textfield.TextInputLayout
 
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="0dp"
         android:layout_gravity="center"
@@ -201,9 +207,11 @@
         tools:ignore="MissingConstraints">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/sms_drawable"
 
             android:textSize="20dp"
@@ -216,7 +224,7 @@
     <com.google.android.material.textfield.TextInputLayout
 
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="0dp"
         android:layout_gravity="center"
@@ -226,13 +234,15 @@
         app:boxCornerRadiusBottomStart="55dp"
         app:hintAnimationEnabled="false"
         app:boxCornerRadiusTopEnd="55dp"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="560dp"
         tools:ignore="MissingConstraints">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/confirmpassword"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:textSize="20dp"
             android:background="@drawable/sms_drawable"
             android:hint="تایید پسورد"
@@ -244,21 +254,23 @@
 
     <TextView
         android:id="@+id/haveaccount"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginTop="718dp"
         android:text="ایا اکانت دارید؟واردشوید"
-        android:textColor="@color/color"
+        android:textColor="#ED683E"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signup_btn"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginTop="642dp"
         android:background="@drawable/sms_drawable2"
         android:text="ثبت نام"

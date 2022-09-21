@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +26,8 @@ private String codmeli , codPersonally , number;
         entry();
         inPut();
         checker();
+        pass.setTextColor(Color.BLACK);
+        codePersonally.setTextColor(Color.BLACK);
     }
     //هنگام اجرا برنامه ادیت  تکس ها و ... مچ میشن
     public void entry (){
@@ -61,7 +64,7 @@ private String codmeli , codPersonally , number;
     public void checker (){
         if(!codmeli .equalsIgnoreCase("0") && !codPersonally .equalsIgnoreCase("0") ){
             codePersonally.setText(codPersonally);
-        }else if(codPersonally.equals("0")  && codmeli.equals("0") ){
+        }else if(codPersonally.equals("0")  && !codmeli.equals("0") ){
             codePersonally.setText(codmeli);
         }
         if(password.startsWith("noPass")){
