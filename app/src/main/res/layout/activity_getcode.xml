@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f1f261"
+    android:background="@drawable/fullcolor"
+    android:id="@+id/color_ss"
     android:layoutDirection="rtl">
 
 <!--    <FrameLayout-->
