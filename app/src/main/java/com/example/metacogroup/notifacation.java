@@ -1,6 +1,7 @@
 package com.example.metacogroup;
 
 import android.os.Bundle;
+import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,12 +12,19 @@ import java.util.ArrayList;
 
 public class notifacation extends AppCompatActivity {
     ArrayList<saeidian_klid> recycleview_arraylist ;
+    ArrayList<saeidian_klid2> saeidian_spinner_array;
+    spinneradapter adapter_spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycleview);
+        initList2();
+        Spinner spinner = (Spinner) findViewById(R.id.spinner_list);
+        adapter_spinner = new spinneradapter(this, saeidian_spinner_array);
+        spinner.setAdapter(adapter_spinner);
 
         initList();
+        initList2();
 
 
         recycle_adapter adapter_saeidian = new recycle_adapter(recycleview_arraylist);
@@ -24,6 +32,22 @@ public class notifacation extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         shayan_listview.setLayoutManager(layoutManager);
         shayan_listview.setAdapter(adapter_saeidian);
+    }
+    private void initList2()
+    {
+
+        saeidian_spinner_array =new ArrayList<>();
+        saeidian_klid2 klid=new saeidian_klid2();
+        klid.name="اسم : حدیث" ;
+        klid.family="فامیل : حسینی";
+        klid.vaziat=" وضعیت : پرستار" ;
+        klid.tedadbimaran= "تعداد بیماران : 20";
+        klid.emtiaz=" امتیاز : 4.2" ;
+        klid.code_personally="کد پرسنلی : 11167896";
+        klid.profile_pic=(R.drawable.phone);
+        saeidian_spinner_array.add(klid);
+
+
     }
     private void initList()
     {

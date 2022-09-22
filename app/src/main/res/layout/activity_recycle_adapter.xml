@@ -21,17 +21,16 @@
         android:background="#CDD3D0"
         >
 
+
         <ImageView
             android:id="@+id/danger"
-            android:layout_width="85dp"
-            android:layout_height="79dp"
+            android:layout_width="50dp"
+            android:layout_height="47dp"
 
-            android:layout_marginStart="272dp"
-            android:layout_marginTop="196dp"
+            android:layout_marginStart="288dp"
+            android:layout_marginTop="68dp"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent"
-             />
-
+            card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/name_setting"
@@ -62,15 +61,14 @@
 
         <ImageView
             android:id="@+id/prof_image"
-            android:layout_width="84dp"
-            android:layout_height="97dp"
-            android:layout_marginStart="272dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="54dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="288dp"
+            android:layout_marginTop="12dp"
             android:gravity="center"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/room_seting"
@@ -100,9 +98,10 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ar2"
-            android:layout_width="248dp"
+            android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginTop="220dp"
             android:background="@drawable/sms_drawable2"
             android:text="نشان دادن وضعیت بیمار با واقعیت افزوده"
@@ -113,10 +112,11 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ar1"
-            android:layout_width="239dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="148dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/sms_drawable2"
             android:text="نشان دادن مسیر با واقعیت افزوده"
             android:textColor="#000"
