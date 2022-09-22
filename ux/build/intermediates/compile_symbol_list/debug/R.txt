@@ -1,0 +1,7 @@
+int drawable sceneform_hand_phone 0x0
+int id sceneform_ar_scene_view 0x0
+int id sceneform_hand_image 0x0
+int id sceneform_hand_layout 0x0
+int layout sceneform_plane_discovery_layout 0x0
+int layout sceneform_ux_fragment_layout 0x0
+int raw sceneform_footprint 0x0
