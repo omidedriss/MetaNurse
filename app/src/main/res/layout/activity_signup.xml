@@ -111,7 +111,7 @@
         android:ems="10"
         android:hint="اسم"
 
-        android:inputType="text"
+        android:inputType="textPersonName"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:textColorHint="@color/purple_700"
@@ -177,6 +177,7 @@
         android:layout_marginTop="310dp"
         android:background="@drawable/sms_drawable"
         android:ems="10"
+        android:maxLength="10"
         android:hint="کد ملی"
         android:inputType="number"
         android:paddingStart="20dp"

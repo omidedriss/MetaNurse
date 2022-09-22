@@ -63,7 +63,26 @@ int codeMeli1,codePersonaly1,number1;
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 if (s.length()> 10){
-                    password.callOnClick();
+                    password.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        codMeli.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (s.length()> 9){
+                    codePersonally.requestFocus();
                 }
             }
 
@@ -84,6 +103,7 @@ int codeMeli1,codePersonaly1,number1;
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(pationt.isChecked()){
                     codePersonally.setEnabled(false);
+                    codePersonally.setText("");
                     codePersonally.setHint("کد پرسنلی غیر فعال");
                 }else {
                     codePersonally.setEnabled(true);
@@ -93,8 +113,29 @@ int codeMeli1,codePersonaly1,number1;
         btSingUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
+                if(name.getText().toString().isEmpty())
+                {
+                    name.setError("فیلد را تکمیل کنید");
+                    name.requestFocus();
+                } else if(family.getText().toString().isEmpty()){
+                    family.setError("فیلد را تکمیل کنید");
+                    family.requestFocus();
+                }else if(codMeli.getText().toString().isEmpty()){
+                    codMeli.setError("فیلد را تکمیل کنید");
+                    codMeli.requestFocus();
+                }else if(codePersonally.getText().toString().isEmpty() && !pationt.isChecked()){
+                    codePersonally.setError("فیلد را تکمیل کنید");
+                    codePersonally.requestFocus();
+                }else if(phoneNumber.getText().toString().isEmpty()){
+                    phoneNumber.setError("فیلد را تکمیل کنید");
+                    phoneNumber.requestFocus();
+                }else if(password.getText().toString().isEmpty()){
+                    password.setError("فیلد را تکمیل کنید");
+                    password.requestFocus();
+                }else if(confirmPassword.getText().toString().isEmpty()){
+                    confirmPassword.setError("فیلد را تکمیل کنید");
+                    confirmPassword.requestFocus();
+                }else{
                 if (password.getText().toString().equalsIgnoreCase(confirmPassword.getText().toString())
                         && phoneNumber.getText().toString().startsWith("09") && phoneNumber.getText().toString().length() == 11 &&
                         codMeli.getText().toString().length() == 10) {
@@ -109,8 +150,9 @@ int codeMeli1,codePersonaly1,number1;
                     Bundle bundle = new Bundle();
                     bundle.putString("code", message);
                     i.putExtras(bundle);
-
-                    startActivity(i);
+                    confirmPassword.setError("تایید پسورد با پسورد یکی نیست");
+                    confirmPassword.requestFocus();
+                    startActivity(i);}
 //            if (TextUtils.isEmpty(phone.getText().toString())) {
 //                Toast.makeText(saeidian_login2.this, "Enter a valid Number", Toast.LENGTH_SHORT).show();
 //            } else {
@@ -118,11 +160,11 @@ int codeMeli1,codePersonaly1,number1;
 //                sendverificationcode(number);
 //            }
 
-                } else {
-                  //  Toast.makeText(getApplicationContext(), "اطالاعات وارد شده نادرست است", Toast.LENGTH_LONG).show();
-//                    if ()
-                    password.setError("لطفا کامل کنید");
                 }
+                /* else {
+
+                    password.setError("لطفا کامل کنید");
+                }*/
             }
         });
 
