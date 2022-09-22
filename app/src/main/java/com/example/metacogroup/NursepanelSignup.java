@@ -19,9 +19,7 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-import javax.xml.validation.Validator;
-
-public class signup extends AppCompatActivity {
+public class NursepanelSignup extends AppCompatActivity {
 TextView vorud,backLogin;
 Button btSingUp;
 EditText password,confirmPassword,name,family,codMeli,phoneNumber,codePersonally;
@@ -86,7 +84,7 @@ int codeMeli1,codePersonaly1,number1;
                     SmsManager mySmsManager = SmsManager.getDefault();
                     mySmsManager.sendTextMessage(phoneNumber.getText().toString(), null, message, null, null);
                     Intent i = new
-                            Intent(signup.this, getcode.class);
+                            Intent(NursepanelSignup.this, NursePanelSmsVerificationCode.class);
                     Bundle bundle = new Bundle();
                     bundle.putString("code", message);
                     i.putExtras(bundle);
@@ -110,7 +108,7 @@ int codeMeli1,codePersonaly1,number1;
 
 
         backLogin.setOnClickListener(v -> {
-            Intent i = new Intent(getApplicationContext(),login.class);
+            Intent i = new Intent(getApplicationContext(), NursePanelLogin.class);
             startActivity(i);
             finish();
         });

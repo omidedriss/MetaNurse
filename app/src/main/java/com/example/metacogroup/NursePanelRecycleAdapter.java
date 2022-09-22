@@ -10,22 +10,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 
-public class recycle_adapter extends RecyclerView.Adapter<saeidian_holder> {
+public class NursePanelRecycleAdapter extends RecyclerView.Adapter<NursePanelRecycleHolder> {
     int i=0;
-    private ArrayList<saeidian_klid> saeidian_list;
-    public recycle_adapter(ArrayList<saeidian_klid> Data) {
+    private ArrayList<NursepPanelRecycleClass> saeidian_list;
+    public NursePanelRecycleAdapter(ArrayList<NursepPanelRecycleClass> Data) {
         saeidian_list = Data;
     }
     @Override
-    public saeidian_holder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public NursePanelRecycleHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // create a new view
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.activity_recycle_adapter, parent, false);
-        saeidian_holder holder = new saeidian_holder(view);
+        NursePanelRecycleHolder holder = new NursePanelRecycleHolder(view);
         return holder;
     }
     @Override
-    public void onBindViewHolder(final saeidian_holder holder, @SuppressLint("RecyclerView") final int position) {
+    public void onBindViewHolder(final NursePanelRecycleHolder holder, @SuppressLint("RecyclerView") final int position) {
 
        // holder.list_info.setOnClickListener(view ->
 

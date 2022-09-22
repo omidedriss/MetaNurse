@@ -7,10 +7,10 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-public class saeidian_holder extends RecyclerView.ViewHolder {
+public class NursePanelRecycleHolder extends RecyclerView.ViewHolder {
     public TextView list_name,list_family,list_vaziat,list_room;
     public ImageView list_profile,list_danger;
-    public saeidian_holder(View show) {
+    public NursePanelRecycleHolder(View show) {
         super(show);
         list_name=show.findViewById(R.id.name_setting);
         list_family=show.findViewById(R.id.family_setting);

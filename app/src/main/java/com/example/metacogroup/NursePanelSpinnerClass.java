@@ -2,7 +2,7 @@ package com.example.metacogroup;
 
 
 
-public class saeidian_klid2 {
+public class NursePanelSpinnerClass {
     public String  name,family,emtiaz,vaziat,tedadbimaran,code_personally;
     int profile_pic;
 

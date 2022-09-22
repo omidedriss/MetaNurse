@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class login extends AppCompatActivity {
+public class NursePanelLogin extends AppCompatActivity {
 EditText pass,codePersonally;
 TextView singUp,forgetPass;
 Button buttonLogin;
@@ -32,7 +32,7 @@ private String codmeli , codPersonally , number;
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),notifacation.class);
+                Intent i = new Intent(getApplicationContext(), NursePanelRecycle.class);
                 startActivity(i);
             }
         });
@@ -45,7 +45,7 @@ private String codmeli , codPersonally , number;
         forgetPass = findViewById(R.id.forgetpassword);
         buttonLogin = findViewById(R.id.login_btn);
         singUp.setOnClickListener(v -> {
-            Intent i = new Intent(getApplicationContext(),signup.class);
+            Intent i = new Intent(getApplicationContext(), NursepanelSignup.class);
             startActivity(i);
             finish();
                 });

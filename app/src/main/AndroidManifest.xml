@@ -18,11 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MetacoGroup"
         tools:targetApi="31">
-        <activity android:name=".getcode"
+        <activity android:name=".NursePanelSmsVerificationCode"
             android:exported="true">
 
         </activity>
-        <activity android:name=".signup"
+        <activity android:name=".NursepanelSignup"
             android:exported="true">
 
         </activity>
@@ -30,19 +30,19 @@
             android:exported="true">
 
         </activity>
-        <activity android:name=".login"
+        <activity android:name=".NursePanelLogin"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".menu"
+            android:name=".NursePanelMenu"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".notifacation"
+            android:name=".NursePanelRecycle"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

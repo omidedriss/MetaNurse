@@ -2,27 +2,24 @@ package com.example.metacogroup;
 
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class spinneradapter extends ArrayAdapter<saeidian_klid2> {
+public class NursePanelSpinnerAdapter extends ArrayAdapter<NursePanelSpinnerClass> {
     int i=0;
-    ArrayList<saeidian_klid2> List;
+    ArrayList<NursePanelSpinnerClass> List;
     Context  context2;
-    public spinneradapter(Context context,
-                            ArrayList<saeidian_klid2> saeidian_klid)
+    public NursePanelSpinnerAdapter(Context context,
+                                    ArrayList<NursePanelSpinnerClass> saeidian_klid)
     {
 
         super(context, 0, saeidian_klid);

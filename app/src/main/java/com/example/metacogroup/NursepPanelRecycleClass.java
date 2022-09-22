@@ -2,7 +2,7 @@ package com.example.metacogroup;
 
 
 
-public class saeidian_klid {
+public class NursepPanelRecycleClass {
     public String  name,family,room,vaziat;
     int profile,danger;
 

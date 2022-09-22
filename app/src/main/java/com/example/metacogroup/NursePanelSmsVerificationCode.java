@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-public class getcode extends AppCompatActivity {
+public class NursePanelSmsVerificationCode extends AppCompatActivity {
     TextView show_phone;
     EditText enter_phone;
     public String message2,message;
@@ -73,7 +73,7 @@ public class getcode extends AppCompatActivity {
 
                     showToast();
                     Intent i = new
-                            Intent(getcode.this, login.class);
+                            Intent(NursePanelSmsVerificationCode.this, NursePanelLogin.class);
                     Bundle bundle = new Bundle();
                     i.putExtras(bundle);
                     startActivity(i);
@@ -86,7 +86,7 @@ public class getcode extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new
-                        Intent(getcode.this, signup.class);
+                        Intent(NursePanelSmsVerificationCode.this, NursepanelSignup.class);
                 Bundle bundle = new Bundle();
                 i.putExtras(bundle);
                 startActivity(i);
@@ -110,7 +110,7 @@ public class getcode extends AppCompatActivity {
                 {
                     showToast2();
                     Intent i = new
-                            Intent(getcode.this, signup.class);
+                            Intent(NursePanelSmsVerificationCode.this, NursepanelSignup.class);
                     Bundle bundle = new Bundle();
                     i.putExtras(bundle);
                     startActivity(i);
