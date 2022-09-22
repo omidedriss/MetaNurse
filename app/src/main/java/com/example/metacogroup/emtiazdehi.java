@@ -52,13 +52,13 @@ public class emtiazdehi extends AppCompatActivity {
 
     public void goback(View view) {
         btn =findViewById(R.id.goback);
-        Intent intent =new Intent(this,login.class);
+        Intent intent =new Intent(this,NursePanelLogin.class);
         startActivity(intent);
     }
 
 
     public void send(View view) {
-        Intent it =new Intent(this,notifacation.class);
+        Intent it =new Intent(this,NursePanelRecycle.class);
         startActivity(it);
         Toast.makeText(this,"ممنون بابت ارسال نظر",Toast.LENGTH_LONG).show();
         finish();
