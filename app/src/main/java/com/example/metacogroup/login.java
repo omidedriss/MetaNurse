@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,6 +29,13 @@ private String codmeli , codPersonally , number;
         checker();
         pass.setTextColor(Color.BLACK);
         codePersonally.setTextColor(Color.BLACK);
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),notifacation.class);
+                startActivity(i);
+            }
+        });
     }
     //هنگام اجرا برنامه ادیت  تکس ها و ... مچ میشن
     public void entry (){

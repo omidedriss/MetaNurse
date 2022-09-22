@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="20dp"
-    android:background="#f1f261"
+    android:background="#868A88"
     android:orientation="vertical"
     card_view:cardCornerRadius="4dp"
     tools:ignore="MissingDefaultResource"
@@ -18,39 +18,43 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:orientation="horizontal"
-        android:background="#f1f261"
+        android:background="#CDD3D0"
         >
 
         <ImageView
             android:id="@+id/danger"
-            android:layout_width="81dp"
-            android:layout_height="67dp"
+            android:layout_width="85dp"
+            android:layout_height="79dp"
 
-            android:layout_marginStart="284dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginStart="272dp"
+            android:layout_marginTop="196dp"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/phone" />
+             />
+
 
         <TextView
             android:id="@+id/name_setting"
-            android:layout_width="135dp"
+            android:layout_width="125dp"
             android:layout_height="45dp"
-            android:background="@drawable/sms_drawable2"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/backgrounf_btn"
             android:padding="10dp"
             android:text="اسم:"
+            android:textColor="#888"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <TextView
             android:id="@+id/family_setting"
-            android:layout_width="130dp"
-            android:layout_height="35dp"
+            android:layout_width="125dp"
+            android:layout_height="45dp"
             android:layout_marginStart="144dp"
             android:layout_marginTop="4dp"
-            android:background="@drawable/sms_drawable2"
+            android:background="@drawable/backgrounf_btn"
             android:padding="10dp"
+            android:textColor="#888"
             android:text="فامیل:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -60,35 +64,36 @@
             android:id="@+id/prof_image"
             android:layout_width="84dp"
             android:layout_height="97dp"
-            android:layout_marginStart="284dp"
+            android:layout_marginStart="272dp"
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/info" />
-
+            />
 
         <TextView
             android:id="@+id/room_seting"
-            android:layout_width="130dp"
+            android:layout_width="125dp"
             android:layout_height="44dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="64dp"
-            android:background="@drawable/sms_drawable2"
+            android:background="@drawable/backgrounf_btn"
             android:padding="10dp"
+            android:textColor="#888"
             android:text="اتاق:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/sit_setting"
-            android:layout_width="130dp"
+            android:id="@+id/vasiat_setting"
+            android:layout_width="125dp"
             android:layout_height="43dp"
             android:layout_marginStart="144dp"
             android:layout_marginTop="68dp"
-            android:background="@drawable/sms_drawable2"
+            android:background="@drawable/backgrounf_btn"
             android:padding="10dp"
+            android:textColor="#888"
             android:text="وضعیت:"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

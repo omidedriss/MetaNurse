@@ -1,14 +1,84 @@
 package com.example.metacogroup;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class notifacation extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+
+import java.util.ArrayList;
+
+public class notifacation extends AppCompatActivity {
+    ArrayList<saeidian_klid> recycleview_arraylist ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notifacation);
+        setContentView(R.layout.recycleview);
+
+        initList();
+
+
+        recycle_adapter adapter_saeidian = new recycle_adapter(recycleview_arraylist);
+        RecyclerView shayan_listview = (RecyclerView) findViewById(R.id.recycle_list);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        shayan_listview.setLayoutManager(layoutManager);
+        shayan_listview.setAdapter(adapter_saeidian);
     }
+    private void initList()
+    {
+
+
+
+
+//        saeidian_klid klids = new saeidian_klid();
+        recycleview_arraylist =new ArrayList<>();
+        saeidian_klid klid1=new saeidian_klid();
+        klid1.name="اسم : زهرا" ;
+        klid1.room="اتاق : 192" ;
+        klid1.family= "فامیلی : عالمی" ;
+        klid1.vaziat="وضعیت : پرستار";
+        klid1.danger=(R.drawable.danger);
+        klid1.profile=(R.drawable.user);
+        recycleview_arraylist.add(klid1);
+
+        saeidian_klid klid2 = new saeidian_klid();
+        klid2.name="اسم : آرزو" ;
+        klid2.room="اتاق : 187" ;
+        klid2.family= "فامیلی : بهبودی" ;
+        klid2.vaziat="وضعیت : پرستار";
+        klid2.danger=(R.drawable.danger);
+        klid2.profile=(R.drawable.user);
+        recycleview_arraylist.add(klid2);
+
+        saeidian_klid klid3 = new saeidian_klid();
+        klid3.name="اسم : ارغوان" ;
+        klid3.room="اتاق : 192" ;
+        klid3.family= "فامیلی : امامی" ;
+        klid3.vaziat="وضعیت : سرپرستار";
+
+        klid3.profile=(R.drawable.user);
+        recycleview_arraylist.add(klid3);
+
+        saeidian_klid klid4 = new saeidian_klid();
+        klid4.name="اسم : پونه" ;
+        klid4.room="اتاق : 165" ;
+        klid4.family= "فامیلی : برومند" ;
+        klid4.vaziat="وضعیت : پرستار";
+
+        klid4.profile=(R.drawable.user);
+        recycleview_arraylist.add(klid4);
+
+        saeidian_klid klid5 = new saeidian_klid();
+        klid5.name="اسم : ثنا" ;
+        klid5.room="اتاق : 11" ;
+        klid5.family= "فامیلی : جعفری" ;
+        klid5.vaziat="وضعیت : سر پرستار";
+
+        klid5.profile=(R.drawable.user);
+        recycleview_arraylist.add(klid5);
+
+
+    }
+
 }
