@@ -5,5 +5,97 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".editProfile">
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ثبت"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="751dp" />
+
+    <ImageView
+        android:id="@+id/myPicProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="62dp"
+        tools:srcCompat="@drawable/back"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="نام :"
+        android:textSize="22dp"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="239dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="نام"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="224dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="فامیل"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="292dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="نام خانوادگی"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="307dp" />
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="شماره موبایل"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="354dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="شماره موبایل"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="369dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="کد پرسنلی شما"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="321dp"
+        tools:layout_editor_absoluteY="430dp" />
+
+    <TextView
+        android:id="@+id/myCodPersonally"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="کد پرسنلی شما"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="430dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
