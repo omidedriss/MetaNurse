@@ -47,7 +47,12 @@ public class NursePanelRecycleAdapter extends RecyclerView.Adapter<NursePanelRec
         holder.list_vaziat.setText((saeidian_list.get(position).getVaziat()));
         holder.list_profile.setImageResource((saeidian_list.get(position).getProfile()));
         holder.list_danger.setImageResource((saeidian_list.get(position).getDanger()));
+        holder.face.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
 
     }
     @Override

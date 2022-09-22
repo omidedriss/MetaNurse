@@ -15,12 +15,10 @@
    limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.google.ar.sceneform.ux"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="com.google.ar.sceneform.ux" >
 
     <uses-sdk
-        android:minSdkVersion="24"
-        android:targetSdkVersion="28" />
+        android:minSdkVersion="1"
+        android:targetSdkVersion="1" />
 
 </manifest>
