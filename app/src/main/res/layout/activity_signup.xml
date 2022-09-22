@@ -8,7 +8,8 @@
     android:layoutDirection="rtl"
     android:layout_gravity="center"
     tools:layout_editor_absoluteY="0dp"
-    android:background="@drawable/hispital">
+
+    android:background="#EAE8E8">
     <!--    <FrameLayout-->
     <!--        android:layout_width="match_parent"-->
     <!--        android:layout_height="match_parent">-->
@@ -29,56 +30,51 @@
 
         <RadioGroup
             android:id="@+id/radioGroup"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
+            android:gravity="center"
             android:orientation="horizontal"
             >
 
             <RadioButton
                 android:id="@+id/doctor"
-                android:layout_width="128dp"
-                android:layout_height="50dp"
-                android:background="@drawable/sms_drawable2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/teal_700"
                 android:text="دکتر"
-                android:textSize="20dp" />
+                android:textStyle="bold"
+                android:textSize="14sp" />
 
             <RadioButton
                 android:id="@+id/nurse"
-                android:layout_width="128dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
                 android:layout_marginRight="10dp"
-                android:background="@drawable/sms_drawable2"
+                android:textColor="@color/teal_700"
+
                 android:text="پرستار"
-                android:textSize="20dp" />
+
+                android:textStyle="bold"
+                android:textSize="14sp"
+                />
 
             <RadioButton
                 android:id="@+id/patient"
-                android:layout_width="128dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/sms_drawable2"
+                android:textColor="@color/teal_700"
+
                 android:text="مریض"
-                android:textSize="20dp" />
+
+                android:textStyle="bold"
+                android:textSize="14sp"
+                />
         </RadioGroup>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="40dp"
-
-        android:text="ثبت نام"
-        android:textColor="@color/purple_700"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/family"
@@ -96,7 +92,7 @@
         android:paddingEnd="20dp"
         android:textColorHint="@color/purple_700"
 
-        android:textSize="20dp"
+        android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -109,7 +105,7 @@
         android:layout_gravity="center"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="190dp"
 
         android:background="@drawable/sms_drawable"
         android:ems="10"
@@ -119,7 +115,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:textColorHint="@color/purple_700"
-        android:textSize="20dp"
+        android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -140,7 +136,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:textColorHint="@color/purple_700"
-        android:textSize="20dp"
+        android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -157,12 +153,14 @@
         android:layout_marginTop="430dp"
         android:background="@drawable/sms_drawable"
         android:ems="10"
+        android:maxEms="11"
+        android:maxLength="11"
         android:hint="شماره موبایل"
         android:inputType="number"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:textColorHint="@color/purple_700"
-        android:textSize="20dp"
+        android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -184,7 +182,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:textColorHint="@color/purple_700"
-        android:textSize="20dp"
+        android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -193,7 +191,7 @@
     <com.google.android.material.textfield.TextInputLayout
 
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="0dp"
         android:layout_gravity="center"
@@ -209,13 +207,13 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/sms_drawable"
 
-            android:textSize="20dp"
+            android:textSize="12dp"
             android:hint="پسورد"
             />
 
@@ -225,7 +223,7 @@
     <com.google.android.material.textfield.TextInputLayout
 
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="0dp"
         android:layout_gravity="center"
@@ -235,16 +233,16 @@
         app:boxCornerRadiusBottomStart="55dp"
         app:hintAnimationEnabled="false"
         app:boxCornerRadiusTopEnd="55dp"
-        android:layout_marginTop="560dp"
+        android:layout_marginTop="550dp"
         tools:ignore="MissingConstraints">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/confirmpassword"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:textSize="20dp"
+            android:textSize="12dp"
             android:background="@drawable/sms_drawable"
             android:hint="تایید پسورد"
             />
@@ -260,6 +258,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
         android:layout_marginTop="718dp"
+        android:visibility="gone"
         android:text="ایا اکانت دارید؟واردشوید"
         android:textColor="#ED683E"
         android:textSize="20dp"
@@ -275,8 +274,9 @@
         android:layout_marginTop="642dp"
         android:background="@drawable/sms_drawable2"
         android:text="ثبت نام"
-        android:textColor="#000"
-        android:textSize="25dp"
+
+        android:textColor="#fff"
+        android:textSize="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

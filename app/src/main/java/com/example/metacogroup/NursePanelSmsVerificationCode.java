@@ -38,11 +38,11 @@ public class NursePanelSmsVerificationCode extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_getcode);
-        ConstraintLayout constraintLayout = findViewById(R.id.color_ss);
-        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2500);
-        animationDrawable.setExitFadeDuration(4000);
-        animationDrawable.start();
+//        ConstraintLayout constraintLayout = findViewById(R.id.color_ss);
+//        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
+//        animationDrawable.setEnterFadeDuration(2500);
+//        animationDrawable.setExitFadeDuration(4000);
+//        animationDrawable.start();
         Bundle bundle = getIntent().getExtras();
         print_phone=findViewById(R.id.phone);
         get_code = (EditText) findViewById(R.id.get_code);

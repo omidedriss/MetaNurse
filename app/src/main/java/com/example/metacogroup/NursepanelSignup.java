@@ -9,6 +9,8 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,8 +34,8 @@ int codeMeli1,codePersonaly1,number1;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         entry();
-        Typeface font = Typeface.createFromAsset(getAssets(), "saeidian_font/BNazanin.ttf");
-        vorud.setTypeface(font);
+//        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/BNazanin.ttf");
+//        vorud.setTypeface(font);
         password .setTextColor(Color.BLACK);
                 confirmPassword.setTextColor(Color.BLACK);
         name.setTextColor(Color.BLACK);
@@ -43,7 +45,7 @@ int codeMeli1,codePersonaly1,number1;
         codePersonally.setTextColor(Color.BLACK);
     }
     public void entry (){
-        vorud=findViewById(R.id.signup);
+       // vorud=findViewById(R.id.signup);
         password = findViewById(R.id.password);
         confirmPassword = findViewById(R.id.confirmpassword);
         codePersonally = findViewById(R.id.codepersonally);
@@ -51,6 +53,25 @@ int codeMeli1,codePersonaly1,number1;
         family = findViewById(R.id.family);
         codMeli= findViewById(R.id.codemeli);
         phoneNumber = findViewById(R.id.phone);
+        phoneNumber.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (s.length()> 10){
+                    password.callOnClick();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         doctor = findViewById(R.id.doctor);
         nurse = findViewById(R.id.nurse);
         radioGroup = findViewById(R.id.radioGroup);
@@ -98,7 +119,9 @@ int codeMeli1,codePersonaly1,number1;
 //            }
 
                 } else {
-                    Toast.makeText(getApplicationContext(), "اطالاعات وارد شده نادرست است", Toast.LENGTH_LONG).show();
+                  //  Toast.makeText(getApplicationContext(), "اطالاعات وارد شده نادرست است", Toast.LENGTH_LONG).show();
+//                    if ()
+                    password.setError("لطفا کامل کنید");
                 }
             }
         });

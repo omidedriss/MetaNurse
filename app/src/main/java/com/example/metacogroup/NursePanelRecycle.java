@@ -1,6 +1,8 @@
 package com.example.metacogroup;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Spinner;
@@ -8,6 +10,7 @@ import android.widget.Toast;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,6 +27,8 @@ public class NursePanelRecycle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recycleview);
         initList2();
+        this.setTitle("لیست بیماران");
+
         Spinner spinner = (Spinner) findViewById(R.id.spinner_list);
         adapter_spinner = new NursePanelSpinnerAdapter(this, saeidian_spinner_array);
         spinner.setAdapter(adapter_spinner);
@@ -49,6 +54,11 @@ public class NursePanelRecycle extends AppCompatActivity {
         if (item.getItemId() == R.id.exit_login) {
             Intent i = new Intent(getApplicationContext(), NursePanelLogin.class);
             startActivity(i);
+            SharedPreferences shareName = getSharedPreferences("namee", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = shareName.edit();
+            editor.putString("passwordd","noPass");
+            editor.commit();
+
         }
         ExitCustomDialog exitCustomDialog = new ExitCustomDialog(NursePanelRecycle.this);
 

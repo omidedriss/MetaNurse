@@ -7,8 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="20dp"
-    android:background="#868A88"
     android:orientation="vertical"
+    android:background="@color/white"
     card_view:cardCornerRadius="4dp"
     tools:ignore="MissingDefaultResource"
     android:layout_margin="15dp"
@@ -18,17 +18,17 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:orientation="horizontal"
-        android:background="#CDD3D0"
+        android:background="#EAE8E8"
         >
 
 
         <ImageView
             android:id="@+id/danger"
-            android:layout_width="50dp"
-            android:layout_height="47dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
 
-            android:layout_marginStart="288dp"
-            android:layout_marginTop="68dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="276dp"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent" />
 
@@ -63,8 +63,8 @@
             android:id="@+id/prof_image"
             android:layout_width="54dp"
             android:layout_height="49dp"
-            android:layout_marginStart="288dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="276dp"
+            android:layout_marginTop="36dp"
             android:gravity="center"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +105,7 @@
             android:layout_marginTop="220dp"
             android:background="@drawable/sms_drawable2"
             android:text="نشان دادن وضعیت بیمار با واقعیت افزوده"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -119,7 +119,7 @@
             android:layout_marginEnd="20dp"
             android:background="@drawable/sms_drawable2"
             android:text="نشان دادن مسیر با واقعیت افزوده"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

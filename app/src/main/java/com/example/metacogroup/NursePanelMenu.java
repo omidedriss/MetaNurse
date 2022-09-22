@@ -29,7 +29,7 @@ public class NursePanelMenu extends AppCompatActivity {
 
         }
         if(item.getItemId()==R.id.exit_login) {
-            Toast.makeText(getApplicationContext(), "صفحه خروج اجباری :)", Toast.LENGTH_LONG).show();
+           // Toast.makeText(getApplicationContext(), "صفحه خروج اجباری :)", Toast.LENGTH_LONG).show();
 
         }
 

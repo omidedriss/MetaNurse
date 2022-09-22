@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -28,7 +29,11 @@ public class NursePanelLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+//        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/B_Yekan.ttf");
+
+
         entry();
+//        singUp.setTypeface(font);
         inPut();
         checker();
         pass.setTextColor(Color.BLACK);
@@ -50,6 +55,7 @@ public class NursePanelLogin extends AppCompatActivity {
         pass = findViewById(R.id.passwordlogin);
         codePersonally = findViewById(R.id.codemelipersoneli);
         singUp = findViewById(R.id.donthaveacount);
+
         forgetPass = findViewById(R.id.forgetpassword);
         buttonLogin = findViewById(R.id.login_btn);
         singUp.setOnClickListener(v -> {
@@ -65,16 +71,12 @@ public class NursePanelLogin extends AppCompatActivity {
     //دریافت اطلاعات از sharepreferences
     public void inPut (){
         SharedPreferences shareName = getSharedPreferences("namee", Context.MODE_PRIVATE);
+
         name = shareName.getString("namee","noName");
-        // SharedPreferences shareFamily = getSharedPreferences("family", Context.MODE_PRIVATE);
         family = shareName.getString("familyy","noFamily");
-        //  SharedPreferences sharePassword = getSharedPreferences("password", Context.MODE_PRIVATE);
         password = shareName.getString("passwordd","noPass");
-        // SharedPreferences shareCodmeli = getSharedPreferences("codmeli", Context.MODE_PRIVATE);
         codmeli = shareName.getString("codmeli","0");
-        // SharedPreferences shareCodePersonally = getSharedPreferences("codepersonally", Context.MODE_PRIVATE);
         codPersonally = shareName.getString("codepersonally","0");
-        // SharedPreferences shareNumber = getSharedPreferences("codepersonally", Context.MODE_PRIVATE);
         number = shareName .getString("number","0");
     }
     public void checker (){
@@ -84,9 +86,11 @@ public class NursePanelLogin extends AppCompatActivity {
             codePersonally.setText(codmeli);
         }
         if(password.startsWith("noPass")){
-            Toast.makeText(getApplicationContext(),password,Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(),password,Toast.LENGTH_LONG).show();
         }else {
-            pass.setText(password);
+            Intent i = new Intent(NursePanelLogin.this,NursePanelRecycle.class);
+            startActivity(i);
+          //  pass.setText(password);
         }
     }
     public void showToast() {

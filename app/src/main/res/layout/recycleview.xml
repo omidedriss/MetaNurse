@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#868A88"
+
+    android:background="#fff"
     android:orientation="vertical">
 
     <Spinner
