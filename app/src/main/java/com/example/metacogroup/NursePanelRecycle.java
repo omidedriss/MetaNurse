@@ -1,5 +1,6 @@
 package com.example.metacogroup;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Spinner;
@@ -45,8 +46,19 @@ public class NursePanelRecycle extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId()==R.id.exit_menu) {
-            Toast.makeText(getApplicationContext(), "صفحه خروج اجباری :)", Toast.LENGTH_LONG).show();
+        if (item.getItemId() == R.id.exit_login) {
+            Intent i = new Intent(getApplicationContext(), NursePanelLogin.class);
+            startActivity(i);
+        }
+        ExitCustomDialog exitCustomDialog = new ExitCustomDialog(NursePanelRecycle.this);
+
+        if (item.getItemId() == R.id.exit_menu) {
+            exitCustomDialog.show();
+        }
+        if (item.getItemId() == R.id.ratting) {
+            Intent i = new Intent(getApplicationContext(), emtiazdehi.class);
+            startActivity(i);
+
 
         }
 
@@ -80,7 +92,7 @@ public class NursePanelRecycle extends AppCompatActivity {
         klid1.name="اسم : زهرا" ;
         klid1.room="اتاق : 192" ;
         klid1.family= "فامیلی : عالمی" ;
-        klid1.vaziat="وضعیت : پرستار";
+        klid1.vaziat="وضعیت : کما ";
         klid1.danger=(R.drawable.danger);
         klid1.profile=(R.drawable.user);
         recycleview_arraylist.add(klid1);
@@ -89,7 +101,7 @@ public class NursePanelRecycle extends AppCompatActivity {
         klid2.name="اسم : آرزو" ;
         klid2.room="اتاق : 187" ;
         klid2.family= "فامیلی : بهبودی" ;
-        klid2.vaziat="وضعیت : پرستار";
+        klid2.vaziat="وضعیت :ایست قلبی ";
         klid2.danger=(R.drawable.danger);
         klid2.profile=(R.drawable.user);
         recycleview_arraylist.add(klid2);
@@ -98,7 +110,7 @@ public class NursePanelRecycle extends AppCompatActivity {
         klid3.name="اسم : ارغوان" ;
         klid3.room="اتاق : 192" ;
         klid3.family= "فامیلی : امامی" ;
-        klid3.vaziat="وضعیت : سرپرستار";
+        klid3.vaziat="وضعیت : وخیم ";
 
         klid3.profile=(R.drawable.user);
         recycleview_arraylist.add(klid3);
@@ -107,7 +119,7 @@ public class NursePanelRecycle extends AppCompatActivity {
         klid4.name="اسم : پونه" ;
         klid4.room="اتاق : 165" ;
         klid4.family= "فامیلی : برومند" ;
-        klid4.vaziat="وضعیت : پرستار";
+        klid4.vaziat="وضعیت : عادی ";
 
         klid4.profile=(R.drawable.user);
         recycleview_arraylist.add(klid4);
@@ -116,7 +128,7 @@ public class NursePanelRecycle extends AppCompatActivity {
         klid5.name="اسم : ثنا" ;
         klid5.room="اتاق : 11" ;
         klid5.family= "فامیلی : جعفری" ;
-        klid5.vaziat="وضعیت : سر پرستار";
+        klid5.vaziat="وضعیت : حاد";
 
         klid5.profile=(R.drawable.user);
         recycleview_arraylist.add(klid5);

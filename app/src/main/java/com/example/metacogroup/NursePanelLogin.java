@@ -77,7 +77,6 @@ public class NursePanelLogin extends AppCompatActivity {
         // SharedPreferences shareNumber = getSharedPreferences("codepersonally", Context.MODE_PRIVATE);
         number = shareName .getString("number","0");
     }
-    //متود چک کننده پسورد و کد ملی و دیتا بیس
     public void checker (){
         if(!codmeli .equalsIgnoreCase("0") && !codPersonally .equalsIgnoreCase("0") ){
             codePersonally.setText(codPersonally);
@@ -90,7 +89,6 @@ public class NursePanelLogin extends AppCompatActivity {
             pass.setText(password);
         }
     }
-    //دیزاین توست
     public void showToast() {
         LayoutInflater inflater = getLayoutInflater();
         View layout = inflater.inflate(R.layout.activity_custom_toast, (ViewGroup) findViewById(R.id.toast_root));
