@@ -16,3 +16,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "MetacoGroup"
 include ':app'
+include ':sceneform'
+include ':ux'
