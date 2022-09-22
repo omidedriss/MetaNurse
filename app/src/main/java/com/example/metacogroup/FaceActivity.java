@@ -89,31 +89,28 @@ public class FaceActivity extends AppCompatActivity {
 
         WeakReference<FaceActivity> weakActivity = new WeakReference<>(this);
 
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            ModelRenderable.builder()
-                    .setSource(
-                            this,
-                            Uri.parse(
-                                    "https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb"))
-                    .setIsFilamentGltf(true)
-                    .build()
-                    .thenAccept(
-                            modelRenderable -> {
-                                FaceActivity activity = weakActivity.get();
-                                if (activity != null) {
-                                    activity.renderable = modelRenderable;
-                                }
-                            })
-                    .exceptionally(
-                            throwable -> {
-                                Toast toast =
-                                        Toast.makeText(this, "Unable to load Tiger renderable", Toast.LENGTH_LONG);
-                                toast.setGravity(Gravity.CENTER, 0, 0);
-                                toast.show();
-                                return null;
-                            });
-        }
+        ModelRenderable.builder()
+                .setSource(
+                        this,
+                        Uri.parse(
+                                "https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb"))
+                .setIsFilamentGltf(true)
+                .build()
+                .thenAccept(
+                        modelRenderable -> {
+                            FaceActivity activity = weakActivity.get();
+                            if (activity != null) {
+                                activity.renderable = modelRenderable;
+                            }
+                        })
+                .exceptionally(
+                        throwable -> {
+                            Toast toast =
+                                    Toast.makeText(this, "Unable to load Tiger renderable", Toast.LENGTH_LONG);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
+                            toast.show();
+                            return null;
+                        });
 
         arFragment.setOnTapArPlaneListener(
                 (HitResult hitResult, Plane plane, MotionEvent motionEvent) -> {
@@ -141,30 +138,26 @@ public class FaceActivity extends AppCompatActivity {
                     nextColor++;
                     for (int i = 0; i < renderable.getSubmeshCount(); ++i) {
                         Material material = renderable.getMaterial(i);
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                            material.setFloat4("baseColorFactor", color);
-                        }
+                        material.setFloat4("baseColorFactor", color);
                     }
 
                     Node tigerTitleNode = new Node();
                     tigerTitleNode.setParent(model);
                     tigerTitleNode.setEnabled(false);
                     tigerTitleNode.setLocalPosition(new Vector3(0.0f, 1.0f, 0.0f));
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                        ViewRenderable.builder()
-                                .setView(this, R.layout.tiger_card_view)
-                                .build()
-                                .thenAccept(
-                                        (renderable) -> {
-                                            tigerTitleNode.setRenderable(renderable);
-                                            tigerTitleNode.setEnabled(true);
-                                        })
-                                .exceptionally(
-                                        (throwable) -> {
-                                            throw new AssertionError("Could not load card view.", throwable);
-                                        }
-                                );
-                    }
+                    ViewRenderable.builder()
+                            .setView(this, R.layout.tiger_card_view)
+                            .build()
+                            .thenAccept(
+                                    (renderable) -> {
+                                        tigerTitleNode.setRenderable(renderable);
+                                        tigerTitleNode.setEnabled(true);
+                                    })
+                            .exceptionally(
+                                    (throwable) -> {
+                                        throw new AssertionError("Could not load card view.", throwable);
+                                    }
+                            );
                 });
 
         arFragment
