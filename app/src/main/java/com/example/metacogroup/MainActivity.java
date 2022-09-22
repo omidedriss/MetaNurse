@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         videoView.setVideoPath("android.resource://"+ getPackageName()+"/"+R.raw.metaco11);
         videoView.start();
         videoView.setOnCompletionListener(mp -> {
-            Intent i = new Intent(MainActivity.this,emtiazdehi.class);
+            Intent i = new Intent(MainActivity.this,NursePanelLogin.class);
             startActivity(i);
             finish();
         });
