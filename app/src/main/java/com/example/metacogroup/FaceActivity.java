@@ -89,6 +89,7 @@ public class FaceActivity extends AppCompatActivity {
 
         WeakReference<FaceActivity> weakActivity = new WeakReference<>(this);
 
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             ModelRenderable.builder()
                     .setSource(
