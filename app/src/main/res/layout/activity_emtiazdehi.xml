@@ -1,9 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".emtiazdehi">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CFC8C8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="137dp"
+            android:text="پرستار"
+            android:textColor="@color/purple_700"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="210dp"
+            android:gravity="end"
+            android:text="اصفهان, شاهین شهر,خیابان فردوسی , غرعی4"
+            android:textColor="@color/purple_700"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="250dp"
+            android:background="@color/color" />
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="حدیث سلامی"
+            android:textColor="@color/purple_700"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center_horizontal"
+            android:text="امتیاز به پرستار"
+            android:textAllCaps="true"
+            android:textColor="@color/purple_700"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/color" />
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_marginTop="320dp"
+            android:background="@color/color" />
+
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="90dp"
+            android:background="@android:drawable/ic_menu_myplaces" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="7dp"
+            android:background="@android:drawable/ic_dialog_map" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="250dp"
+            android:background="@android:drawable/ic_menu_my_calendar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="260dp"
+            android:gravity="end"
+            android:text="سه شنبه شب"
+            android:textColor="@color/purple_700"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+
+            android:gravity="start"
+            android:padding="15dp"
+            android:paddingRight="10dp"
+            android:text="به پرستار خود امتیاز دهید"
+            android:textColor="@color/purple_700"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:padding="15dp"
+            android:paddingRight="10dp"
+            android:text="از پرستار خود راضی بودید؟"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="60dp"
+            android:progressTint="#FFEB3B" />
+
+        <TextView
+            android:id="@+id/rezayat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="500dp"
+            android:gravity="center"
+            android:text="چطور بود؟"
+            android:textColor="@color/purple_700"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="150dp"
+            android:gravity="start"
+            android:padding="15dp"
+            android:paddingRight="10dp"
+            android:text="نظر شما درباره پرستار محفوظ است"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp" />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="530dp"
+            android:background="@android:drawable/stat_notify_chat"
+            android:gravity="start"
+            android:padding="18dp" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/sms_drawable"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="...نظر خود را ارائه بدهید"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/color"
+            android:textColorHint="@color/purple_200" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="40dp"
+            android:onClick="send"
+            android:text="ارسال "
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/goback"
+            android:layout_width="40dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:drawable/ic_input_delete"
+            android:onClick="goback"
+            app:rippleColor="@color/white" />
+
+
+    </FrameLayout>
+</LinearLayout>
