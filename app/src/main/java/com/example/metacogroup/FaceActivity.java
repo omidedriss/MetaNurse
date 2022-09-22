@@ -85,7 +85,7 @@ public class FaceActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_face);
-       // arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
+        arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
 
         WeakReference<FaceActivity> weakActivity = new WeakReference<>(this);
 
