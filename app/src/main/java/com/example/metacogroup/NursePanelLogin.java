@@ -34,8 +34,8 @@ public class NursePanelLogin extends AppCompatActivity {
         pass.setTextColor(Color.BLACK);
         codePersonally.setTextColor(Color.BLACK);
         buttonLogin.setOnClickListener(v -> {
-            if((codePersonally.getText().toString().equalsIgnoreCase(codPersonally)||
-                    codePersonally.getText().toString().equalsIgnoreCase(codmeli) && pass.getText().toString().
+            if(((codePersonally.getText().toString().equalsIgnoreCase(codPersonally)||
+                    codePersonally.getText().toString().equalsIgnoreCase(codmeli)) && pass.getText().toString().
                             equalsIgnoreCase(password)) ){
                 Intent i = new Intent(getApplicationContext(),NursePanelRecycle.class);
                 startActivity(i);}
