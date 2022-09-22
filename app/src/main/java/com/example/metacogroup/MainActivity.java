@@ -16,12 +16,10 @@ public class MainActivity extends AppCompatActivity {
         videoView.setVideoPath("android.resource://"+ getPackageName()+"/"+R.raw.metaco11);
         videoView.start();
         videoView.setOnCompletionListener(mp -> {
-            Intent i = new Intent(MainActivity.this,login.class);
+            Intent i = new Intent(MainActivity.this,emtiazdehi.class);
             startActivity(i);
             finish();
         });
-
-
 
 
 
