@@ -85,7 +85,7 @@ public class NursePanelRecycle extends AppCompatActivity {
         klid.tedadbimaran= "تعداد بیماران : 20";
         klid.emtiaz=" امتیاز : 4.2" ;
         klid.code_personally="کد پرسنلی : 11167896";
-        klid.profile_pic=(R.drawable.phone);
+
         saeidian_spinner_array.add(klid);
 
 
@@ -104,7 +104,7 @@ public class NursePanelRecycle extends AppCompatActivity {
         klid1.family= "فامیلی : عالمی" ;
         klid1.vaziat="وضعیت : کما ";
         klid1.danger=(R.drawable.danger);
-        klid1.profile=(R.drawable.user);
+
         recycleview_arraylist.add(klid1);
 
         NursepPanelRecycleClass klid2 = new NursepPanelRecycleClass();
@@ -113,7 +113,7 @@ public class NursePanelRecycle extends AppCompatActivity {
         klid2.family= "فامیلی : بهبودی" ;
         klid2.vaziat="وضعیت :ایست قلبی ";
         klid2.danger=(R.drawable.danger);
-        klid2.profile=(R.drawable.user);
+
         recycleview_arraylist.add(klid2);
 
         NursepPanelRecycleClass klid3 = new NursepPanelRecycleClass();
@@ -122,7 +122,7 @@ public class NursePanelRecycle extends AppCompatActivity {
         klid3.family= "فامیلی : امامی" ;
         klid3.vaziat="وضعیت : وخیم ";
 
-        klid3.profile=(R.drawable.user);
+
         recycleview_arraylist.add(klid3);
 
         NursepPanelRecycleClass klid4 = new NursepPanelRecycleClass();
@@ -131,7 +131,6 @@ public class NursePanelRecycle extends AppCompatActivity {
         klid4.family= "فامیلی : برومند" ;
         klid4.vaziat="وضعیت : عادی ";
 
-        klid4.profile=(R.drawable.user);
         recycleview_arraylist.add(klid4);
 
         NursepPanelRecycleClass klid5 = new NursepPanelRecycleClass();
@@ -140,7 +139,6 @@ public class NursePanelRecycle extends AppCompatActivity {
         klid5.family= "فامیلی : جعفری" ;
         klid5.vaziat="وضعیت : حاد";
 
-        klid5.profile=(R.drawable.user);
         recycleview_arraylist.add(klid5);
 
 
