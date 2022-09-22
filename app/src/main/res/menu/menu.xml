@@ -21,6 +21,9 @@
     <item android:title="درباره"
         android:id="@+id/info"
         />
+    <item android:title="خروج از حساب کاربری "
+        android:id="@+id/exit_login"
+        />
     <item android:title="خروج"
         android:id="@+id/exit_menu"
         />

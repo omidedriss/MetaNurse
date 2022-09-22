@@ -32,6 +32,10 @@ public class menu extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "صفحه خروج اجباری :)", Toast.LENGTH_LONG).show();
 
         }
+        if(item.getItemId()==R.id.exit_login) {
+            Toast.makeText(getApplicationContext(), "صفحه خروج اجباری :)", Toast.LENGTH_LONG).show();
+
+        }
 
         return super.onOptionsItemSelected(item);
     }

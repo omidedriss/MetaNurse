@@ -1,8 +1,14 @@
 package com.example.metacogroup;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.Spinner;
+import android.widget.Toast;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,6 +38,21 @@ public class notifacation extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         shayan_listview.setLayoutManager(layoutManager);
         shayan_listview.setAdapter(adapter_saeidian);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==R.id.exit_menu) {
+            Toast.makeText(getApplicationContext(), "صفحه خروج اجباری :)", Toast.LENGTH_LONG).show();
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
     private void initList2()
     {
@@ -102,6 +123,9 @@ public class notifacation extends AppCompatActivity {
         klid5.profile=(R.drawable.user);
         recycleview_arraylist.add(klid5);
 
+
+    }
+    public void menuu(){
 
     }
 
