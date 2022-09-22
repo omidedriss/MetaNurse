@@ -31,7 +31,7 @@ public class NursePanelRecycle extends AppCompatActivity {
         initList2();
 
 
-        NursePanelRecycleAdapter adapter_saeidian = new NursePanelRecycleAdapter(recycleview_arraylist);
+        NursePanelRecycleAdapter adapter_saeidian = new NursePanelRecycleAdapter(recycleview_arraylist,NursePanelRecycle.this);
         RecyclerView shayan_listview = (RecyclerView) findViewById(R.id.recycle_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         shayan_listview.setLayoutManager(layoutManager);

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/shape_shadow"
     android:orientation="vertical"
     tools:context=".emtiazdehi">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#CFC8C8">
+        android:background="#000000">
 
         <TextView
             android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
             android:layout_marginStart="280dp"
             android:layout_marginTop="137dp"
             android:text="پرستار"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -29,7 +29,7 @@
             android:layout_marginTop="210dp"
             android:gravity="end"
             android:text="اصفهان, شاهین شهر,خیابان فردوسی , غرعی4"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <Button
@@ -46,7 +46,7 @@
             android:layout_marginTop="100dp"
             android:gravity="center"
             android:text="حدیث سلامی"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/white"
             android:textSize="19sp"
             android:textStyle="bold" />
 
@@ -57,7 +57,7 @@
             android:gravity="center_horizontal"
             android:text="امتیاز به پرستار"
             android:textAllCaps="true"
-            android:textColor="@color/purple_700"
+            android:textColor="@android:color/background_light"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -105,7 +105,7 @@
             android:layout_marginTop="260dp"
             android:gravity="end"
             android:text="سه شنبه شب"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/white"
             android:textSize="20sp" />
 
         <TextView
@@ -118,7 +118,7 @@
             android:padding="15dp"
             android:paddingRight="10dp"
             android:text="به پرستار خود امتیاز دهید"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -131,7 +131,7 @@
             android:padding="15dp"
             android:paddingRight="10dp"
             android:text="از پرستار خود راضی بودید؟"
-            android:textColor="@color/purple_700"
+            android:textColor="@android:color/background_light"
             android:textSize="18sp" />
 
         <RatingBar
@@ -141,7 +141,7 @@
             android:layout_gravity="center"
 
             android:layout_marginTop="60dp"
-            android:progressTint="#FFEB3B" />
+            android:progressTint="@color/yellow" />
 
         <TextView
             android:id="@+id/rezayat"
@@ -151,7 +151,7 @@
             android:layout_marginTop="500dp"
             android:gravity="center"
             android:text="چطور بود؟"
-            android:textColor="@color/purple_700"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -165,7 +165,7 @@
             android:padding="15dp"
             android:paddingRight="10dp"
             android:text="نظر شما درباره پرستار محفوظ است"
-            android:textColor="@color/purple_700"
+            android:textColor="@android:color/background_light"
             android:textSize="18sp" />
 
         <ImageView

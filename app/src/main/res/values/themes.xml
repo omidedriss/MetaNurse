@@ -3,15 +3,15 @@
     <style name="Theme.MetacoGroup" parent="Theme.MaterialComponents.NoActionBar">
 
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#EE0000</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryVariant">#FFFFFF</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondary">#F4F0F0</item>
+        <item name="colorSecondaryVariant">#FFFFFF</item>
+        <item name="colorOnSecondary">#000000</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">#FF0015</item>
+        <item name="android:statusBarColor">#000000</item>
         <!-- Customize your theme here. -->
     </style>
     <style name="Theme.MetacoGroup_noaktionbar" parent="Theme.MaterialComponents.NoActionBar">

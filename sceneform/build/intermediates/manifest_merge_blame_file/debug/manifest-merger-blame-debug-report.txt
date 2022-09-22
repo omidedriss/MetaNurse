@@ -3,9 +3,9 @@
 3    package="com.google.ar.sceneform" >
 4
 5    <uses-sdk
-6        android:minSdkVersion="24"
-6-->C:\Users\THESHEOX-PC\Desktop\metanurse_nurse\sceneform\src\main\AndroidManifest.xml
-7        android:targetSdkVersion="28" />
-7-->C:\Users\THESHEOX-PC\Desktop\metanurse_nurse\sceneform\src\main\AndroidManifest.xml
+6        android:minSdkVersion="1"
+6-->C:\Users\Developer\AndroidStudioProjects\metanurse\sceneform\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="1" />
+7-->C:\Users\Developer\AndroidStudioProjects\metanurse\sceneform\src\main\AndroidManifest.xml
 8
 9</manifest>

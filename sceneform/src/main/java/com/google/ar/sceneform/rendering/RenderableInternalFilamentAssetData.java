@@ -2,9 +2,11 @@ package com.google.ar.sceneform.rendering;
 
 import android.content.Context;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import com.google.android.filament.IndexBuffer;
+import com.google.android.filament.Material;
+import com.google.android.filament.MaterialInstance;
 import com.google.android.filament.VertexBuffer;
 import com.google.android.filament.gltfio.MaterialProvider;
 import com.google.android.filament.gltfio.ResourceLoader;
@@ -34,7 +36,34 @@ public class RenderableInternalFilamentAssetData implements IRenderableInternalD
 
   static MaterialProvider getMaterialProvider() {
     if (materialProvider == null) {
-      materialProvider = new MaterialProvider(EngineInstance.getEngine().getFilamentEngine());
+      materialProvider = new MaterialProvider() {
+        @Nullable
+        @Override
+        public MaterialInstance createMaterialInstance(MaterialKey config, @NonNull int[] uvmap, @Nullable String label, @Nullable String extras) {
+          return null;
+
+        }
+
+        @NonNull
+        @Override
+        public Material[] getMaterials() {
+          return new Material[0];
+        }
+
+        @Override
+        public boolean needsDummyData(int attrib) {
+          return false;
+        }
+
+        @Override
+        public void destroyMaterials() {
+
+        }
+
+        @Override
+        public void destroy() {
+        }
+      };
     }
     return materialProvider;
   }

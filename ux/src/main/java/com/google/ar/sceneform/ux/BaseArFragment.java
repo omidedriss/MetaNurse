@@ -25,11 +25,12 @@ import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -71,13 +72,7 @@ public abstract class BaseArFragment extends Fragment
 
   /** Invoked when the ARCore Session is initialized. */
   public interface OnSessionInitializationListener {
-    /**
-     * The callback will only be invoked once after a Session is initialized and before it is
-     * resumed for the first time.
-     *
-     * @see #setOnSessionInitializationListener(OnTapArPlaneListener)
-     * @param session The ARCore Session.
-     */
+
     void onSessionInitialization(Session session);
   }
 
@@ -208,7 +203,9 @@ public abstract class BaseArFragment extends Fragment
   @Override
   public void onDestroyView() {
     super.onDestroyView();
-    arSceneView.getViewTreeObserver().removeOnWindowFocusChangeListener(onFocusListener);
+    if (Build.VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN_MR2) {
+      arSceneView.getViewTreeObserver().removeOnWindowFocusChangeListener(onFocusListener);
+    }
   }
 
   /**
@@ -274,45 +271,49 @@ public abstract class BaseArFragment extends Fragment
         == PackageManager.PERMISSION_GRANTED) {
       return;
     }
-    AlertDialog.Builder builder;
-    builder =
-        new AlertDialog.Builder(requireActivity(), android.R.style.Theme_Material_Dialog_Alert);
+    AlertDialog.Builder builder = null;
+    if (Build.VERSION.SDK_INT >= VERSION_CODES.HONEYCOMB) {
+      builder =
+          new AlertDialog.Builder(requireActivity(), android.R.style.Theme_Material_Dialog_Alert);
+    }
 
-    builder
-        .setTitle("Camera permission required")
-        .setMessage("Add camera permission via Settings?")
-        .setPositiveButton(
-            android.R.string.ok,
-            new DialogInterface.OnClickListener() {
-              @Override
-              public void onClick(DialogInterface dialog, int which) {
-                // If Ok was hit, bring up the Settings app.
-                Intent intent = new Intent();
-                intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                intent.setData(Uri.fromParts("package", requireActivity().getPackageName(), null));
-                requireActivity().startActivity(intent);
-                // When the user closes the Settings app, allow the app to resume.
-                // Allow the app to ask for permissions again now.
-                setCanRequestDangerousPermissions(true);
-              }
-            })
-        .setNegativeButton(android.R.string.cancel, null)
-        .setIcon(android.R.drawable.ic_dialog_alert)
-        .setOnDismissListener(
-            new OnDismissListener() {
-              @Override
-              public void onDismiss(final DialogInterface arg0) {
-                // canRequestDangerousPermissions will be true if "OK" was selected from the dialog,
-                // false otherwise.  If "OK" was selected do nothing on dismiss, the app will
-                // continue and may ask for permission again if needed.
-                // If anything else happened, finish the activity when this dialog is
-                // dismissed.
-                if (!getCanRequestDangerousPermissions()) {
-                  requireActivity().finish();
+    if (Build.VERSION.SDK_INT >= VERSION_CODES.JELLY_BEAN_MR1) {
+      builder
+          .setTitle("Camera permission required")
+          .setMessage("Add camera permission via Settings?")
+          .setPositiveButton(
+              android.R.string.ok,
+              new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                  // If Ok was hit, bring up the Settings app.
+                  Intent intent = new Intent();
+                  intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                  intent.setData(Uri.fromParts("package", requireActivity().getPackageName(), null));
+                  requireActivity().startActivity(intent);
+                  // When the user closes the Settings app, allow the app to resume.
+                  // Allow the app to ask for permissions again now.
+                  setCanRequestDangerousPermissions(true);
                 }
-              }
-            })
-        .show();
+              })
+          .setNegativeButton(android.R.string.cancel, null)
+          .setIcon(android.R.drawable.ic_dialog_alert)
+          .setOnDismissListener(
+              new OnDismissListener() {
+                @Override
+                public void onDismiss(final DialogInterface arg0) {
+                  // canRequestDangerousPermissions will be true if "OK" was selected from the dialog,
+                  // false otherwise.  If "OK" was selected do nothing on dismiss, the app will
+                  // continue and may ask for permission again if needed.
+                  // If anything else happened, finish the activity when this dialog is
+                  // dismissed.
+                  if (!getCanRequestDangerousPermissions()) {
+                    requireActivity().finish();
+                  }
+                }
+              })
+          .show();
+    }
   }
 
   /**
@@ -442,27 +443,29 @@ public abstract class BaseArFragment extends Fragment
   @SuppressWarnings({"AndroidApiChecker", "FutureReturnValueIgnored"})
   
   protected void setupSelectionRenderable(FootprintSelectionVisualizer selectionVisualizer) {
-    ModelRenderable.builder()
-        .setSource(getActivity(), R.raw.sceneform_footprint)
-        .setIsFilamentGltf(true)
-        .build()
-        .thenAccept(
-            renderable -> {
-              // If the selection visualizer already has a footprint renderable, then it was set to
-              // something custom. Don't override the custom visual.
-              if (selectionVisualizer.getFootprintRenderable() == null) {
-                selectionVisualizer.setFootprintRenderable(renderable);
-              }
-            })
-        .exceptionally(
-            throwable -> {
-              Toast toast =
-                  Toast.makeText(
-                      getContext(), "Unable to load footprint renderable", Toast.LENGTH_LONG);
-              toast.setGravity(Gravity.CENTER, 0, 0);
-              toast.show();
-              return null;
-            });
+    if (Build.VERSION.SDK_INT >= VERSION_CODES.N) {
+      ModelRenderable.builder()
+          .setSource(getActivity(), R.raw.sceneform_footprint)
+          .setIsFilamentGltf(true)
+          .build()
+          .thenAccept(
+              renderable -> {
+                // If the selection visualizer already has a footprint renderable, then it was set to
+                // something custom. Don't override the custom visual.
+                if (selectionVisualizer.getFootprintRenderable() == null) {
+                  selectionVisualizer.setFootprintRenderable(renderable);
+                }
+              })
+          .exceptionally(
+              throwable -> {
+                Toast toast =
+                    Toast.makeText(
+                        getContext(), "Unable to load footprint renderable", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+                return null;
+              });
+    }
   }
 
   protected abstract void handleSessionException(UnavailableException sessionException);
@@ -480,16 +483,18 @@ public abstract class BaseArFragment extends Fragment
     FragmentActivity activity = getActivity();
     if (hasFocus && activity != null) {
       // Standard Android full-screen functionality.
-      activity
-          .getWindow()
-          .getDecorView()
-          .setSystemUiVisibility(
-              View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                  | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                  | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                  | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                  | View.SYSTEM_UI_FLAG_FULLSCREEN
-                  | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+      if (Build.VERSION.SDK_INT >= VERSION_CODES.HONEYCOMB) {
+        activity
+            .getWindow()
+            .getDecorView()
+            .setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+      }
       activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
   }
