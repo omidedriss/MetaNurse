@@ -18,31 +18,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MetacoGroup"
         tools:targetApi="31">
-        <activity android:name=".NursePanelSmsVerificationCode"
+        <activity android:name=".emtiazdehi"
             android:exported="true">
 
         </activity>
-        <activity android:name=".NursepanelSignup"
+        <activity android:name=".getcode"
             android:exported="true">
 
         </activity>
-        <activity android:name=".editProfile"
+        <activity android:name=".signup"
             android:exported="true">
 
         </activity>
-        <activity android:name=".NursePanelLogin"
+        <activity android:name=".login"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".NursePanelMenu"
+            android:name=".menu"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".NursePanelRecycle"
+            android:name=".notifacation"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -63,6 +63,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
