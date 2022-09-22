@@ -113,29 +113,7 @@ int codeMeli1,codePersonaly1,number1;
         btSingUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(name.getText().toString().isEmpty())
-                {
-                    name.setError("فیلد را تکمیل کنید");
-                    name.requestFocus();
-                } else if(family.getText().toString().isEmpty()){
-                    family.setError("فیلد را تکمیل کنید");
-                    family.requestFocus();
-                }else if(codMeli.getText().toString().isEmpty()){
-                    codMeli.setError("فیلد را تکمیل کنید");
-                    codMeli.requestFocus();
-                }else if(codePersonally.getText().toString().isEmpty() && !pationt.isChecked()){
-                    codePersonally.setError("فیلد را تکمیل کنید");
-                    codePersonally.requestFocus();
-                }else if(phoneNumber.getText().toString().isEmpty()){
-                    phoneNumber.setError("فیلد را تکمیل کنید");
-                    phoneNumber.requestFocus();
-                }else if(password.getText().toString().isEmpty()){
-                    password.setError("فیلد را تکمیل کنید");
-                    password.requestFocus();
-                }else if(confirmPassword.getText().toString().isEmpty()){
-                    confirmPassword.setError("فیلد را تکمیل کنید");
-                    confirmPassword.requestFocus();
-                }else{
+
                 if (password.getText().toString().equalsIgnoreCase(confirmPassword.getText().toString())
                         && phoneNumber.getText().toString().startsWith("09") && phoneNumber.getText().toString().length() == 11 &&
                         codMeli.getText().toString().length() == 10) {
@@ -160,11 +138,35 @@ int codeMeli1,codePersonaly1,number1;
 //                sendverificationcode(number);
 //            }
 
-                }
-                /* else {
+                 else {
+                    if(name.getText().toString().isEmpty())
+                    {
+                        name.setError("نام خود را وارد کنید");
+                        name.requestFocus();
+                    } else if(family.getText().toString().isEmpty()){
+                        family.setError("فیلد را تکمیل کنید");
+                        family.requestFocus();
+                    }else if(codMeli.getText().toString().isEmpty()){
+                        codMeli.setError("کد ملی را صحیح وارد کنید");
+                        codMeli.requestFocus();
+                    }else if(codePersonally.getText().toString().isEmpty() && !pationt.isChecked()){
+                        codePersonally.setError("کد پرسنلی خود را وارد کنید");
+                        codePersonally.requestFocus();
+                    }else if(phoneNumber.getText().toString().isEmpty() ||
+                            !phoneNumber.getText().toString().startsWith("09")){
+                        phoneNumber.setError("شماره مبایل را صحیح وارد کنید");
+                        phoneNumber.requestFocus();
+                    }else if(password.getText().toString().isEmpty()){
+                        password.setError("پسورد خود را وارد کنید");
+                        password.requestFocus();
+                    }else if(confirmPassword.getText().toString().isEmpty()) {
 
-                    password.setError("لطفا کامل کنید");
-                }*/
+                        confirmPassword.setError("فیلد را تکمیل کنید");
+                        confirmPassword.requestFocus();
+                    }else {confirmPassword.requestFocus();
+                    confirmPassword.setError("پسورد خود را صحیح وارد کنید");}
+
+                }
             }
         });
 

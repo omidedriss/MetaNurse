@@ -67,7 +67,7 @@
                 android:layout_marginRight="10dp"
                 android:textColor="@color/teal_700"
 
-                android:text="مریض"
+                android:text="بیمار"
 
                 android:textStyle="bold"
                 android:textSize="14sp"
