@@ -15,10 +15,10 @@ import java.util.ArrayList;
 public class NursePanelRecycleAdapter extends RecyclerView.Adapter<NursePanelRecycleHolder> {
     int i=0;
     private ArrayList<NursepPanelRecycleClass> saeidian_list;
-    public Context context;
+    public Context context2;
     public NursePanelRecycleAdapter(ArrayList<NursepPanelRecycleClass> Data, Context context) {
         saeidian_list = Data;
-        context=context;
+        context2=context;
     }
     @Override
     public NursePanelRecycleHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -55,8 +55,8 @@ public class NursePanelRecycleAdapter extends RecyclerView.Adapter<NursePanelRec
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(context,FaceActivity.class);
-                context.startActivity(i);
+                Intent i = new Intent(context2,FaceActivity.class);
+                context2.startActivity(i);
             }
         });
 
