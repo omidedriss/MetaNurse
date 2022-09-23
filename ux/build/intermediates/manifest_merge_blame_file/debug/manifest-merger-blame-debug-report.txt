@@ -19,8 +19,8 @@
 19
 20    <uses-sdk
 21        android:minSdkVersion="1"
-21-->C:\Users\THESHEOX-PC\Desktop\metanurse_nurse\ux\src\main\AndroidManifest.xml
+21-->C:\Users\Administrator\AndroidStudioProjects\metanurse3\ux\src\main\AndroidManifest.xml
 22        android:targetSdkVersion="1" />
-22-->C:\Users\THESHEOX-PC\Desktop\metanurse_nurse\ux\src\main\AndroidManifest.xml
+22-->C:\Users\Administrator\AndroidStudioProjects\metanurse3\ux\src\main\AndroidManifest.xml
 23
 24</manifest>

@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.metacogroup.sharedcamera.SharedCameraActivity;
+
 import java.util.ArrayList;
 
 
@@ -55,7 +57,7 @@ public class NursePanelRecycleAdapter extends RecyclerView.Adapter<NursePanelRec
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(context2,FaceActivity.class);
+                Intent i = new Intent(context2, SharedCameraActivity.class);
                 context2.startActivity(i);
             }
         });
