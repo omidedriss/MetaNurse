@@ -16,7 +16,6 @@ public class ApplicationContext extends Application {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-
     }
     @Override
     public void onCreate() {
