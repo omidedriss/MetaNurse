@@ -1,12 +1,12 @@
 package com.example.metacogroup;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.text.Editable;
@@ -17,42 +17,56 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Random;
 
-public class NursepanelSignup extends AppCompatActivity {
+public class NursepanelSignup extends AppCompatActivity implements View.OnClickListener {
 TextView vorud,backLogin;
-Button btSingUp;
+AppCompatButton signUp_ss;
 EditText password,confirmPassword,name,family,codMeli,phoneNumber,codePersonally;
 RadioButton doctor,nurse,pationt;
 RadioGroup radioGroup;
 String message;
+    TextView tvLogin;
 int codeMeli1,codePersonaly1,number1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_register_test);
         entry();
+       try {
+            this.getActionBar().hide();
+        }catch (Exception e){
+        tvLogin = findViewById(R.id.tvLogin);
+        tvLogin.setOnClickListener(this);
+        }
+
 //        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/BNazanin.ttf");
 //        vorud.setTypeface(font);
         password .setTextColor(Color.BLACK);
-                confirmPassword.setTextColor(Color.BLACK);
+        confirmPassword.setTextColor(Color.BLACK);
         name.setTextColor(Color.BLACK);
-        family.setTextColor(Color.BLACK);
+//        family.setTextColor(Color.BLACK);
         codMeli.setTextColor(Color.BLACK);
         phoneNumber.setTextColor(Color.BLACK);
-        codePersonally.setTextColor(Color.BLACK);
+//        codePersonally.setTextColor(Color.BLACK);
     }
+    @Override
+    public void onClick(View v) {
+        NursepanelSignup.this.finish();
+    }
+
     public void entry (){
        // vorud=findViewById(R.id.signup);
         password = findViewById(R.id.password);
         confirmPassword = findViewById(R.id.confirmpassword);
-        codePersonally = findViewById(R.id.codepersonally);
+        //codePersonally = findViewById(R.id.codepersonally);
         name = findViewById(R.id.name);
-        family = findViewById(R.id.family);
-        codMeli= findViewById(R.id.codemeli);
+        //family = findViewById(R.id.family);
+        codMeli= findViewById(R.id.codemelipersoneli);
         phoneNumber = findViewById(R.id.phone);
+        signUp_ss = findViewById(R.id.signup_ss);
+
         phoneNumber.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -72,45 +86,27 @@ int codeMeli1,codePersonaly1,number1;
 
             }
         });
-        codMeli.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-            }
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                if (s.length()> 9){
-                    codePersonally.requestFocus();
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-        doctor = findViewById(R.id.doctor);
-        nurse = findViewById(R.id.nurse);
-        radioGroup = findViewById(R.id.radioGroup);
-        pationt = findViewById(R.id.patient);
-        backLogin = findViewById(R.id.haveaccount);
-        btSingUp = findViewById(R.id.signup_btn);
-        nurse.setChecked(true);
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(pationt.isChecked()){
-                    codePersonally.setEnabled(false);
-                    codePersonally.setText("");
-                    codePersonally.setHint("کد پرسنلی غیر فعال");
-                }else {
-                    codePersonally.setEnabled(true);
-                    codePersonally.setHint("کد پرسنلی فعال");}
-            }
-        });
-        btSingUp.setOnClickListener(new View.OnClickListener() {
+//        doctor = findViewById(R.id.doctor);
+//        nurse = findViewById(R.id.nurse);
+//        radioGroup = findViewById(R.id.radioGroup);
+//        pationt = findViewById(R.id.patient);
+ //       backLogin = findViewById(R.id.haveaccount);
+//        nurse.setChecked(true);
+//        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup group, int checkedId) {
+//                if(pationt.isChecked()){
+//                    codePersonally.setEnabled(false);
+//                    codePersonally.setText("");
+//                    codePersonally.setHint("کد پرسنلی غیر فعال");
+//                }else {
+//                    codePersonally.setEnabled(true);
+//                    codePersonally.setHint("کد پرسنلی فعال");}
+//            }
+     //   });
+        signUp_ss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -143,16 +139,17 @@ int codeMeli1,codePersonaly1,number1;
                     {
                         name.setError("نام خود را وارد کنید");
                         name.requestFocus();
-                    } else if(family.getText().toString().isEmpty()){
-                        family.setError("فیلد را تکمیل کنید");
-                        family.requestFocus();
-                    }else if(codMeli.getText().toString().isEmpty()){
+//                    } else if(family.getText().toString().isEmpty()){
+//                        family.setError("فیلد را تکمیل کنید");
+//                        family.requestFocus();
+                    }else if(codMeli.getText().toString().isEmpty()) {
                         codMeli.setError("کد ملی را صحیح وارد کنید");
                         codMeli.requestFocus();
-                    }else if(codePersonally.getText().toString().isEmpty() && !pationt.isChecked()){
-                        codePersonally.setError("کد پرسنلی خود را وارد کنید");
-                        codePersonally.requestFocus();
-                    }else if(phoneNumber.getText().toString().isEmpty() ||
+                    }
+//                   else if(codePersonally.getText().toString().isEmpty() && !pationt.isChecked()){
+//                        codePersonally.setError("کد پرسنلی خود را وارد کنید");
+//                        codePersonally.requestFocus();
+                    else if(phoneNumber.getText().toString().isEmpty() ||
                             !phoneNumber.getText().toString().startsWith("09")){
                         phoneNumber.setError("شماره مبایل را صحیح وارد کنید");
                         phoneNumber.requestFocus();
@@ -163,8 +160,7 @@ int codeMeli1,codePersonaly1,number1;
 
                         confirmPassword.setError("فیلد را تکمیل کنید");
                         confirmPassword.requestFocus();
-                    }else {confirmPassword.requestFocus();
-                    confirmPassword.setError("پسورد خود را صحیح وارد کنید");}
+                    }
 
                 }
             }
@@ -174,11 +170,11 @@ int codeMeli1,codePersonaly1,number1;
 
 
 
-        backLogin.setOnClickListener(v -> {
-            Intent i = new Intent(getApplicationContext(), NursePanelLogin.class);
-            startActivity(i);
-            finish();
-        });
+//        backLogin.setOnClickListener(v -> {
+//            Intent i = new Intent(getApplicationContext(), NursePanelLogin.class);
+//            startActivity(i);
+//            finish();
+//        });
     }
     public void putExtra(){
        // codeMeli1 = Integer.getInteger(codMeli.getText().toString());
@@ -187,11 +183,13 @@ int codeMeli1,codePersonaly1,number1;
             SharedPreferences shareName = getSharedPreferences("namee", Context.MODE_PRIVATE);
              SharedPreferences.Editor editor = shareName.edit();
                   editor.putString("namee",String.valueOf(name.getText()));
-                  editor.putString("familyy",String.valueOf(family.getText()));
+//                  editor.putString("familyy",String.valueOf(family.getText()));
                   editor.putString("number",String.valueOf(phoneNumber.getText()));
                   editor.putString("passwordd",String.valueOf(password.getText()));
                   editor.putString("codmeli",codMeli.getText().toString());
-                  editor.putString("codepersonally",codePersonally.getText().toString());
+                 // editor.putString("codepersonally",codePersonally.getText().toString());
                   editor.commit();
     }
+
+
 }

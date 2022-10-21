@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".shadowlogintest">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo" />
+    </RelativeLayout>
+    <RelativeLayout
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:layout_width="220dp"
+        android:layout_height="480dp"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/shape_left_panel">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoginPanel"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_login_panel"
+        android:layout_height="350dp"
+        android:paddingTop="70dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:orientation="vertical"
+       >
+        <EditText
+            android:drawableRight="@drawable/person"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:inputType="numberPassword"
+            android:textColorHint="@color/purple_700"
+            android:id="@+id/passwordlogin"
+            android:hint="کد پرسنل/کد ملی" />
+        <EditText
+            android:drawableRight="@drawable/key"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColorHint="@color/purple_700"
+            android:hint="رمز ورود"
+            android:inputType="numberPassword"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="فراموشی رمز عبور؟"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@id/llLoginPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/shape_login_button"
+        android:text="ورود"
+        android:id="@+id/login_btn"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:textColor="@color/white"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Login"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/header"/>
+    <TextView
+        android:id="@+id/signup"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="25dp"
+        android:gravity="right"
+       app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textSize="20sp"
+        android:textColor="@color/purple_700"
+        app:layout_constraintTop_toBottomOf="@id/header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="20dp"
+        android:gravity="center_horizontal"
+        tools:ignore="MissingConstraints"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

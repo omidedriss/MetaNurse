@@ -18,30 +18,39 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class NursePanelLogin extends AppCompatActivity {
+public class NursePanelLogin extends AppCompatActivity implements View.OnClickListener {
     EditText pass,codePersonally;
     TextView singUp,forgetPass;
     Button buttonLogin;
+    TextView tvSignUp;
+    TextView tvSignUpSecond;
     private String name,family,password;
     private String codmeli , codPersonally , number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_shadowlogintest);
 //        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/B_Yekan.ttf");
+        try {
+            this.getActionBar().hide();
+        }catch (Exception e){
 
+            setContentView(R.layout.activity_shadowlogintest);
+            tvSignUp = findViewById(R.id.signup);
+            tvSignUp.setOnClickListener(this);
+
+        }
 
         entry();
 //        singUp.setTypeface(font);
         inPut();
         checker();
         pass.setTextColor(Color.BLACK);
-        codePersonally.setTextColor(Color.BLACK);
+//        codePersonally.setTextColor(Color.BLACK);
         buttonLogin.setOnClickListener(v -> {
-            if(((codePersonally.getText().toString().equalsIgnoreCase(codPersonally)||
-                    codePersonally.getText().toString().equalsIgnoreCase(codmeli)) && pass.getText().toString().
-                            equalsIgnoreCase(password)) ){
+            if( pass.getText().toString().
+                            equalsIgnoreCase(password)) {
                 Intent i = new Intent(getApplicationContext(),NursePanelRecycle.class);
                 startActivity(i);}
             else
@@ -50,11 +59,16 @@ public class NursePanelLogin extends AppCompatActivity {
 
         });
     }
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(getApplicationContext(),NursepanelSignup.class);
+        NursePanelLogin.this.startActivity(intent);
+    }
     //هنگام اجرا برنامه ادیت  تکس ها و ... مچ میشن
     public void entry (){
         pass = findViewById(R.id.passwordlogin);
         codePersonally = findViewById(R.id.codemelipersoneli);
-        singUp = findViewById(R.id.donthaveacount);
+        singUp = findViewById(R.id.signup);
 
         forgetPass = findViewById(R.id.forgetpassword);
         buttonLogin = findViewById(R.id.login_btn);
@@ -63,10 +77,10 @@ public class NursePanelLogin extends AppCompatActivity {
             startActivity(i);
             finish();
         });
-        forgetPass.setOnClickListener(v -> {
-            //  Intent i = new Intent(getApplicationContext(),forget.class);
-            // startActivity(i);
-        });
+//        forgetPass.setOnClickListener(v -> {
+//            //  Intent i = new Intent(getApplicationContext(),forget.class);
+//            // startActivity(i);
+//        });
     }
     //دریافت اطلاعات از sharepreferences
     public void inPut (){
@@ -80,11 +94,10 @@ public class NursePanelLogin extends AppCompatActivity {
         number = shareName .getString("number","0");
     }
     public void checker (){
-        if(!codmeli .equalsIgnoreCase("0") && !codPersonally .equalsIgnoreCase("0") ){
-            codePersonally.setText(codPersonally);
-        }else if(codPersonally.equals("0")  && !codmeli.equals("0") ){
-            codePersonally.setText(codmeli);
-        }
+//        if(!codmeli .equalsIgnoreCase("0") && !codPersonally .equalsIgnoreCase("0") ){
+//            code.setText(codPersonally);
+//
+//        }
         if(password.startsWith("noPass")){
             //Toast.makeText(getApplicationContext(),password,Toast.LENGTH_LONG).show();
         }else {
@@ -110,4 +123,8 @@ public class NursePanelLogin extends AppCompatActivity {
 
         toast.show();}
 
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
+    }
 }
